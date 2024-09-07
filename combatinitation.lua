@@ -148,10 +148,10 @@ Tab3:AddTextbox({
 	Name = "Utility Boost Value",
 	Default = "2",
 	TextDisappear = false,
-	Flag = "utilityboostvalue",
 	Callback = function(Value)
 
 	end 
+	Flag = "utilityboostvalue"
 })
 Tab3:AddButton({
 	Name = "Utility Boost",
