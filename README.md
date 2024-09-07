@@ -1,2 +1,3 @@
-# scripts
-Place where i keep my scripts. (yippe)
+# The Scripting Domain
+Combat Initation (updated for v2.1.1)
+``
