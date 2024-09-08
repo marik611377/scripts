@@ -128,7 +128,7 @@ local Tab2 = Window:MakeTab({
 Tab2:AddButton({
 	Name = "Electric Punk",
 	Callback = function()
-      		game.Players.LocalPlayer.Backpack.Parent.AccessoryEffects:SetAttribute("Lighting_Chance", 100)
+      		game.Players.LocalPlayer.Backpack.Parent.AccessoryEffects:SetAttribute("Lightning_Chance", 100)
   	end    
 })
 local Tab3 = Window:MakeTab({
