@@ -101,7 +101,6 @@ Section4:AddButton({
       		game.Players.LocalPlayer.Backpack.Bazooka:SetAttribute("ReloadTick", 0)
 			game.Players.LocalPlayer.Backpack.Bazooka:SetAttribute("Capacity", 100)
 			game.Players.LocalPlayer.Backpack.Bazooka:SetAttribute("PassiveReloadTick", 0)
-			game.Players.LocalPlayer.Backpack.Bazooka:SetAttribute("Cooldown", 0.1)
   	end    
 })
 local Section5 = Tab:AddSection({
