@@ -120,6 +120,21 @@ Section5:AddButton({
       		game.Players.LocalPlayer.Backpack["Explosive Pinata"]:SetAttribute("Cooldown", 0)
   	end    
 })
+local Section6 = Tab:AddSection({
+	Name = "Trowel"
+})
+Section6:AddToggle({
+	Name = "Frozen Wrench",
+	Default = false,
+	Callback = function(Value)
+		if Value == true then
+			game.Players.LocalPlayer.Backpack.Wrench:SetAttribute("TimeScale", 0)
+		end
+		if Value == false then
+			game.Players.LocalPlayer.Backpack.Wrench:SetAttribute("TimeScale", 1)
+		end
+	end    
+})
 local Tab2 = Window:MakeTab({
 	Name = "Hats",
 	Icon = "rbxassetid://4483345998",
