@@ -179,7 +179,7 @@ local Tab4 = Window:MakeTab({
 	PremiumOnly = false
 })
 Tab4:AddParagraph("v2.1.1","Updated for")
-Tab4:AddParagraph("v1.1 ALPHA","Current version")
+Tab4:AddParagraph("v1.3 ALPHA","Current version")
 Tab4:AddParagraph("marik611277","Made by")
 Tab4:AddParagraph("Synapse X Remake","Created firstly in")
 Tab4:AddParagraph("Non-GUI script","Inspired by")
