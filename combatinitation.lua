@@ -280,7 +280,7 @@ local Tab5 = Window:MakeTab({
 	PremiumOnly = false
 })
 makeMoreLables(Tab5, {
-	"Experimental function test"
+	1 = "Experimental function test"
 })
 
 OrionLib:Init()
