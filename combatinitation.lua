@@ -15,7 +15,11 @@ local function modifyToolAttributes(toolName, attributes)
         print(toolName .. " not found in the Backpack or equipped.")
     end
 end
-
+local function makeMoreLabels(tab, labels)
+	for labeltext, _ in pairs(labels) do
+		tab:AddLabel(labeltext)
+	end
+end
 local Tab = Window:MakeTab({
 	Name = "Fun Stuffz",
 	Icon = "rbxassetid://4483345998",
@@ -269,5 +273,14 @@ Tab4:AddParagraph("marik611277", "Made by")
 Tab4:AddParagraph("Synapse X Remake", "Created firstly in")
 Tab4:AddParagraph("Non-GUI script", "Inspired by")
 Tab4:AddParagraph("discord.gg/HmP63uHfWq", "Synapse X Remake Discord")
+
+local Tab5 = Window:MakeTab({
+	Name = "Update Log",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+makeMoreLables(Tab5, {
+	"Experimental function test"
+})
 
 OrionLib:Init()
