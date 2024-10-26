@@ -16,7 +16,7 @@ local function modifyToolAttributes(toolName, attributes)
     end
 end
 local function makeMoreLabels(tab, labels)
-	for labeltext, _ in pairs(labels) do
+	for _, labeltext in pairs(labels) do
 		tab:AddLabel(labeltext)
 	end
 end
