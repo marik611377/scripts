@@ -2,35 +2,44 @@
 > If you find our repository useful don't forget to star!
 
 > [!NOTE]
-> Ignore the message above 
+> Ignore above
 
-> [!WARNING]
-> The list may be outdated, and as such certain fastflags will not work.
-> By the way, taken from bloxstrap fastflags list.
-> Should have not turned it all into a comment lmao
+> [!CAUTION]
+> List uses an older verison of it.
 
 <h3 align="center">
   <img src="assets/timeless.gif" width="256" alt="Playboi Carti">
 </h3>
 
-<h1 align="center"><img src="https://raw.githubusercontent.com/bloxstraplabs/bloxstrap/refs/heads/main/Images/Bloxstrap.png" width="24" alt="Playboi Carti"> #RBXFLAG$</h1>
+<h1 align="center">#RBXFLAG$</h1>
 
-<div align="left">
-
-`10.24.24`
-
-<h3 align="center">View Here</h3>
+<h4 align="center">Join our Discord Server to contribute & expand our list (We need you)</h4>
 <h5 align="center">https://discord.gg/HNe7fzR9xg</h5>
+
+<h4 align="center">Join our Roblox group</h4>
+<h5 align="center">https://www.roblox.com/groups/34911020/FIVE55</h5>
+
+<h4 align="center">Repository Discussions</h4>
+<h5 align="center">https://github.com/espresso-soft/rbxflags/discussions</h5>
+
+<h4 align="center">PROMOTE OUR CLEAN LIST TO NORMAL USERS</h4>
+<h5 align="center">https://github.com/fastvariable/nvrmaintain</h5>
+
+> [!CAUTION]
+> **Fast Flags are extremely powerful, being that they are intended to only be used by Roblox engineers. While they can be very useful, they can cause issues with stability and functionality if you don't know what you're doing.**
 
 <h3 align="center">tell pizzaboxer to make good updates</h3>
 
 #### Version: `10.10.24` `F R E A K`
-* **200 Currently Listed**
-* **Removed 28 FastFlags**
-* **`Slide on Terrain/Meshes`**
-* **`Self Explanatory 10`**
-* **`Self Explanatory 11`**
-* **`break everything`**
+* **225 Currently Listed**
+* **`Noclip 5`**
+* **`Noclip 6`**
+* **`Delayed Animations`**
+* **`Bouncy`**
+* **`Increased Grass Motion` `No Grass Motion`**
+* **`Low Gravity`**
+* **`Upside Down while slowly being sent to heaven`**
+* **`Slow Walk + Low Gravity`**
 * **[Upcoming Updates Progress](assets/lists/updates/progress.md)**
 
 ## List Meanings
@@ -1225,6 +1234,14 @@ High
     "DFFlagSimHumanoidTimestepModelUpdate": "True"
 }
 ```
+### Bouncy
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntMaxAltitudePDStickHipHeightPercent": "-200",
+    "DFIntDebugSimPrimalLineSearch": "1"
+}
+```
 ### Drunk
 ```json
 {
@@ -1309,6 +1326,15 @@ High
     "DFIntGameNetPVHeaderTranslationZeroCutoffExponent": "10"
 }
 ```
+### Invisible 3
+> [!NOTE]
+> **Restricts the client from sending any physics-related information. This means other people can topple you over.**
+```json
+{
+    "DFIntPhysicsSenderMaxBandwidthBps": "1",
+    "DFIntPhysicsSenderMaxBandwidthBpsScaling": "0"
+}
+```
 ### Clientsided Invisible
 ```json
 {
@@ -1342,6 +1368,54 @@ High
     "DFIntSimBroadPhasePairCountMax": "50"
 }
 ```
+### Noclip 3 ✨
+###### @burgerboxer & @dis_spencer
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntMaximumFreefallMoveTimeInTenths": "1000",
+    "DFIntDebugSimPrimalStiffness": "0"
+}
+```
+### Noclip 4
+###### @burgerboxer
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalNewtonIts": "1"
+}
+```
+### Noclip 5
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FFlagDebugSimPrimalGSLump": "True",
+    "FIntDebugSimPrimalGSLumpAlpha": "-1111"
+}
+```
+### Noclip 6
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalPreconditioner": "1",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "10"
+}
+```
+### Freeze 1
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "0"
+}
+```
+### Freeze 2
+###### @burgerboxer
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalNewtonIts": "0"
+}
+```
 ### Hip Height ✨
 > [!NOTE]
 > **Very controllable bounce, only works with negative values**
@@ -1372,10 +1446,191 @@ High
     "DFIntMaxClientSimulationRadius": "2147000000"
 }
 ```
-### Slide on Terrain/Meshes
-```
+### Low Gravity 1 ✨
+> [!NOTE]
+> `'FFlagDebugSimDefaultPrimalSolver' : True`  
+> This flag enables the new simulation engine or whatever it is.
+
+> [!CAUTION]
+> `'DFIntDebugSimPrimalLineSearch' : 1`  
+> This setting is a poor man's gravity/flight. The default value is 100:
+> - **Above 0:** Low gravity.
+> - **Below 1 to -1:** Will make gameplay weird, especially with physics.
+> - **Below -1:** Acts as a poor man's fly mode (not really usable).
+###### [@Amity](https://www.youtube.com/watch?v=5M411LL17B0)
+```json
 {
-    "DFIntSmoothTerrainPhysicsRayAabbSlop": "-9999"
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "3"
+}
+```
+### Low Gravity 2
+> [!CAUTION]
+> **This is more buggy**
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalPreconditioner": "100",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "100",
+    "DFIntDebugSimPrimalNewtonIts": "1",
+    "DFIntDebugSimPrimalWarmstartVelocity": "-150",
+    "DFIntDebugSimPrimalWarmstartForce": "-775",
+    "DFIntDebugSimPrimalToleranceInv": "1"
+}
+```
+### Low Gravity 2 Control on Parts Improvement
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalNewtonIts": "1",
+    "DFIntDebugSimPrimalPreconditioner": "15",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "10",
+    "DFIntDebugSimPrimalToleranceInv": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "-150",
+    "DFIntDebugSimPrimalWarmstartVelocity": "100"
+}
+```
+### Low Gravity 3
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FFlagDebugSimPrimalGSLump": "True",
+    "FIntDebugSimPrimalGSLumpAlpha": "-1111"
+}
+```
+### Slow Walk + Low Gravity 
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "1",
+    "DFIntDebugSimPrimalWarmstartVelocity": "50"
+}
+```
+### Upside Down while slowly being sent to heaven
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "1000",
+    "DFIntDebugSimPrimalWarmstartVelocity": "50"
+}
+```
+### Void Unanchored Parts
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "222"
+}
+```
+### Tool Fly
+```json
+{
+    "DFIntMinimalSimRadiusBuffer": "2147000000",
+    "DFIntMinClientSimulationRadius": "2147000000",
+    "DFFlagSimHumanoidTimestepModelUpdate": "True",
+    "DFIntMaxClientSimulationRadius": "2147000000",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FFlagSimAdaptiveTimesteppingDefault2": "True",
+    "DFIntNonSolidFloorPercentForceApplication": "-12000",
+    "DFIntDebugSimPrimalPreconditioner": "100",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "100",
+    "DFIntDebugSimPrimalNewtonIts": "2",
+    "DFIntDebugSimPrimalWarmstartVelocity": "-150",
+    "DFIntDebugSimPrimalWarmstartForce": "-775",
+    "DFIntDebugSimPrimalToleranceInv": "1"
+}
+```
+### Backwards SpeedHax
+> [!WARNING]
+> **Bugginess and speed depend on the value of `DFIntDebugSimPrimalWarmstartForce`. Recommended values are `775` and the value I put.**
+
+> [!TIP]
+> **For `DFIntDebugSimPrimalWarmstartVelocity`, it’s recommended to use a value of `150`. However, it might be difficult to control.**
+
+> [!NOTE]
+> **I may not have found this first, but I discovered this by myself.**
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalNewtonIts": "1",
+    "DFIntDebugSimPrimalPreconditioner": "69",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "69",
+    "DFIntDebugSimPrimalToleranceInv": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "-885",
+    "DFIntDebugSimPrimalWarmstartVelocity": "-350",
+    "FFlagDebugSimPrimalGSLump": "True",
+    "FIntDebugSimPrimalGSLumpAlpha": "-1111"
+}
+```
+### Vehicle Speed 1
+```json
+{
+    "DFIntDebugSimPrimalWarmstartForce": "40",
+    "DFIntDebugSimPrimalWarmstartVelocity": "102",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalLineSearch": "41"
+}
+```
+### Vehicle Speed 2 ✨
+> [!TIP]
+> **Adjust `DFIntDebugSimPrimalWarmstartVelocity` or `DFIntBulletContactBreakOrthogonalThresholdPercent` and find the best values for you**
+```json
+{
+    "DFIntDebugSimPrimalLineSearch": "50",
+    "DFIntDebugSimPrimalWarmstartVelocity": "103",
+    "DFIntDebugSimPrimalStiffness": "300",
+    "DFIntBulletContactBreakOrthogonalThresholdPercent": "10000"
+}
+```
+### GRAH GRAH
+```json
+{
+    "DFIntDebugSimPrimalLineSearch": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "160",
+    "DFIntDebugSimPrimalWarmstartVelocity": "102",
+    "FFlagDebugSimDefaultPrimalSolver": "True"
+}
+```
+
+### Spin 1
+###### @bloodraven
+```json
+{
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FIntDebugSimPrimalGSLumpAlpha": "-2147483647",
+    "DFIntDebugSimPrimalPreconditioner": "1100",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "1000",
+    "DFIntDebugSimPrimalNewtonIts": "2",
+    "DFIntDebugSimPrimalWarmstartVelocity": "102",
+    "DFIntDebugSimPrimalWarmstartForce": "-800",
+    "DFIntDebugSimPrimalToleranceInv": "1"
+}
+```
+### Speed 2
+> [!NOTE]
+> **Not backwards but more buggy**
+```json
+{
+    "DFIntDebugSimPrimalWarmstartForce": "-285",
+    "DFIntDebugSimPrimalWarmstartVelocity": "750",
+    "FIntDebugSimPrimalGSLumpAlpha": "-2147483647",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalPreconditioner": "100",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "1000",
+    "DFIntDebugSimPrimalNewtonIts": "1",
+    "DFIntDebugSimPrimalToleranceInv": "10",
+    "DFFlagSimHumanoidTimestepModelUpdate": "True",
+    "FFlagSimAdaptiveTimesteppingDefault2": "True",
+    "DFIntDebugSimPrimalLineSearch": "100"
+}
+```
+### real god mode fr
+###### fake @pyhlou
+> [!TIP]
+> Disconnect your internet before joining a game and turn it on again
+```json
+{
+    "DFIntGameNetOptimizeParallelPhysicsSendAssemblyBatch": "0"
 }
 ```
 
@@ -1429,7 +1684,6 @@ High
 }
 ```
 ### Xray ✨
-###### @tyetonix
 ```json
 {
     "DFIntCullFactorPixelThresholdMainViewHighQuality": "10000",
@@ -1443,28 +1697,79 @@ High
 
 #### You can contribute by making a pull request.
 
-<h1 align="center">lol</h1>
-
-### break everything
-```
+## Fling Things and People
+### Send people to hell 😈😈
+```json
 {
-    "DFIntHttpRbxApiClientPerMinuteRequestLimit": "60",
-    "DFIntHttpRbxApiJobFrequencyInSeconds": "60",
-    "DFIntHttpRbxApiMaxBudgetMultiplier": "2",
-    "DFIntHttpRbxApiMaxRetryBudgetPerMinute": "60",
-    "DFIntHttpRbxApiMaxRetryCount": "3",
-    "DFIntHttpRbxApiMaxRetryQueueSize": "1000",
-    "DFIntHttpRbxApiMaxSyncRetries": "3",
-    "DFIntHttpRbxApiPerMinuteRequestLimit": "60",
-    "DFIntHttpRbxApiSameUrlRequestLimit": "30",
-    "DFIntHttpRbxApiServiceDecaySeconds": "300",
-    "DFIntHttpRbxApiMaxThrottledQueue": "500"
+    "DFIntSimAdaptiveHumanoidPDControllerSubstepMultiplier": "-999999",
+    "DFFlagSimHumanoidTimestepModelUpdate": "True",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FFlagSimAdaptiveTimesteppingDefault2": "True",
+    "DFIntDebugSimPrimalWarmstartVelocity": "-10",
+    "DFIntDebugSimPrimalWarmstartForce": "1750",
+    "DFIntDebugSimPrimalPreconditioner": "-20",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "1000",
+    "DFIntDebugSimPrimalNewtonIts": "2",
+    "DFIntDebugSimPrimalToleranceInv": "2"
 }
 ```
+### Send people to hell V2
+> [!TIP]
+> Modify warmstart to change speed
+```json
+{
+    "DFIntDebugSimPrimalNewtonIts": "2",
+    "DFIntDebugSimPrimalPreconditioner": "1100",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "1000",
+    "DFIntDebugSimPrimalToleranceInv": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "-800",
+    "DFIntDebugSimPrimalWarmstartVelocity": "102",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "FIntDebugSimPrimalGSLumpAlpha": "-2147483647"
+}
+```
+### Send people to heaven
+```json
+{
+    "DFIntDebugSimPrimalNewtonIts": "1",
+    "DFIntDebugSimPrimalPreconditioner": "15",
+    "DFIntDebugSimPrimalPreconditionerMinExp": "10",
+    "DFIntDebugSimPrimalToleranceInv": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "-150",
+    "DFIntDebugSimPrimalWarmstartVelocity": "100",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+}
+```
+
+<h1 align="center">lol</h1>
+
 ### Stop the Chinese from spying on you
 ```json
 {
     "FStringTencentAuthPath": "null"
+}
+```
+### Don't Touch The Wall! 1
+```json
+{
+    "DFIntDebugSimPrimalNewtonIts": "-2147483647",
+    "DFIntDebugSimPrimalToleranceInv": "-2147483647",
+    "FFlagDebugSimDefaultPrimalSolver": "True"
+}
+```
+### Dont Touch The Wall! 2
+```json
+{
+    "DFIntDebugSimPrimalPreconditionerMinExp": "20",
+    "DFIntDebugSimPrimalWarmstartVelocity": "-101",
+    "DFIntDebugSimPrimalPreconditioner": "1000",
+    "DFIntDebugSimPrimalWarmstartForce": "1",
+    "DFIntDebugSimPrimalNewtonIts": "4000",
+    "DFFlagSimHumanoidTimestepModelUpdate": "True",
+    "FFlagSimAdaptiveTimesteppingDefault2": "True",
+    "FFlagDebugSimDefaultPrimalSolver": "True",
+    "DFIntDebugSimPrimalToleranceInv": "6",
+    "DFIntDebugSimPrimalLineSearch": "1"
 }
 ```
 ### omg i cant believe roblox is that dumb to do this...
@@ -1614,25 +1919,19 @@ High
     "DFFlagDebugSimulateHangAtShutdown": "True"
 }
 ```
-### Self Explanatory 10
-> [!NOTE]
-> **LDL Program Stats**
-```json
-{
-    "DFFlagDebugSimLDLProgramPrintBuildStats": "True",
-    "DFFlagDebugSimLDLProgramPrintExecStats": "True"
-}
-```
-### Self Explanatory 11
-```json
-{
-    "FFlagDebugCountSimBodyAllocations": "True"
-}
-```
 <h1 align="center">Community Presets</h1>
 
 <h4 align="center">We are not accepting performance Fast Flags that aren't listed or known.</h4>
 
+### Noclip + Low Gravity + Fly (Weird Movement)
+```json
+{
+    "DFIntDebugSimPrimalLineSearch": "1",
+    "DFIntDebugSimPrimalWarmstartForce": "160",
+    "DFIntDebugSimPrimalWarmstartVelocity": "102",
+    "FFlagDebugSimDefaultPrimalSolver": "True"
+}
+```
 ### absolutely kill your game quality with fflags known to me
 ##### @dynamitebumblemouth
 ```json
