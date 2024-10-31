@@ -33,6 +33,7 @@ Section1:AddToggle({
 	Flag = "Sword",
 	Callback = function(Value)
 		while Value do
+			task.wait(0.5)
 			modifyToolAttributes("Sword", {
 				LungeRate = 0,
 				Swingrate = 0,
@@ -50,6 +51,7 @@ Section1:AddToggle({
 	Flag = "Firebrand",
 	Callback = function()
 		while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Firebrand", {
 			    LungeRate = 0,
 			    Swingrate = 0,
@@ -68,6 +70,7 @@ Section1:AddToggle({
 	Flag = "Katana",
 	Callback = function(Value)
 		while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Katana", {
 			    LungeRate = 0,
 			    Swingrate = 0,
@@ -88,6 +91,7 @@ Section2:AddToggle({
 	Flag = "Slingshot",
 	Callback = function()
 		while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Slingshot", {
 			    Capacity = 10000,
 			    ChargeRate = 0,
@@ -107,6 +111,7 @@ Section2:AddToggle({
 	Flag = "Flamethrower",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Flamethrower", {
 			    Cooldown = 0
 		    })
@@ -125,6 +130,7 @@ Section3:AddToggle({
 	Flag = "Paintball_Gun",
 	Callback = function()
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Paintball Gun", {
 			    Firerate = 0,
 			    ProjectileSpeed = 2250
@@ -141,6 +147,7 @@ Section3:AddToggle({
 	Flag = "BB_Gun",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("BB Gun", {
 			    Firerate = 0,
 			    MinShots = 2,
@@ -158,6 +165,7 @@ Section3:AddToggle({
 	Flag = "Freeze_Ray",
 	Callback = function()
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Freeze Ray", {
 			    Firerate = 0,
 			    ProjectileSpeed = 2250,
@@ -173,6 +181,7 @@ Section3:AddToggle({
 	Flag = "Freeze_RayCharge",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Freeze Ray", {
 			    Firerate = 0,
 			    ProjectileSpeed = 2250,
@@ -192,6 +201,7 @@ Section4:AddToggle({
 	Flag = "Ninja_Stars",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Ninja Stars", {
 			    ThrowRate = 0,
 			    Capacity = 10000000,
@@ -209,6 +219,7 @@ Section4:AddToggle({
 	Flag = "Bazooka",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Bazooka", {
 			    ReloadTick = 0,
 			    Capacity = 100,
@@ -229,6 +240,7 @@ Section5:AddToggle({
 	Flag = "Subspace_Tripmine",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Subspace Tripmine", {
 			    Cooldown = 0
 		    })
@@ -244,6 +256,7 @@ Section5:AddToggle({
 	Flag = "Explosive_Pinata",
 	Callback = function(Value)
         while Value do
+			task.wait(0.5)
 		    modifyToolAttributes("Explosive Pinata", {
 			    Cooldown = 0
 		    })
