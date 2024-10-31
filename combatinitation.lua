@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Combat Initation Script (v2.1.2)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Combat Initation Script (v2.1.2)", HidePremium = false, SaveConfig = true, ConfigFolder = "CombatInitationConfig"})
 
 -- Function to modify tool attributes safely (check both Backpack and equipped tools)
 local function modifyToolAttributes(toolName, attributes)
