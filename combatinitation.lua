@@ -26,39 +26,54 @@ local Section1 = Tab:AddSection({ Name = "Sword" })
 Section1:AddParagraph("Sword", "Parry go BRRR")
 
 -- Button for Modded Sword
-Section1:AddButton({
+Section1:AddToggle({
 	Name = "Modded Sword",
-	Callback = function()
-		modifyToolAttributes("Sword", {
-			LungeRate = 0,
-			Swingrate = 0,
-			OffhandSwingRate = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Sword",
+	Callback = function(Value)
+		while Value do
+			modifyToolAttributes("Sword", {
+				LungeRate = 0,
+				Swingrate = 0,
+				OffhandSwingRate = 0
+			})
+		end
 	end
 })
 
 -- Button for Modded Firebrand
-Section1:AddButton({
+Section1:AddToggle({
 	Name = "Modded Firebrand",
+	Default = false,
+	Save = true,
+	Flag = "Firebrand",
 	Callback = function()
-		modifyToolAttributes("Firebrand", {
-			LungeRate = 0,
-			Swingrate = 0,
-			OffhandSwingRate = 0,
-			Windup = 0
-		})
+		while Value do
+		    modifyToolAttributes("Firebrand", {
+			    LungeRate = 0,
+			    Swingrate = 0,
+			    OffhandSwingRate = 0,
+			    Windup = 0
+		    })
+		end
 	end
 })
 
 -- Button for Modded Katana
-Section1:AddButton({
+Section1:AddToggle({
 	Name = "Modded Katana",
-	Callback = function()
-		modifyToolAttributes("Katana", {
-			LungeRate = 0,
-			Swingrate = 0,
-			OffhandSwingRate = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Katana",
+	Callback = function(Value)
+		while Value do
+		    modifyToolAttributes("Katana", {
+			    LungeRate = 0,
+			    Swingrate = 0,
+			    OffhandSwingRate = 0
+		    })
+		end
 	end
 })
 
@@ -66,26 +81,36 @@ local Section2 = Tab:AddSection({ Name = "Slingshot" })
 Section2:AddParagraph("Slingshot", "Spammy!")
 
 -- Button for Modded Slingshot
-Section2:AddButton({
+Section2:AddToggle({
 	Name = "Modded Slingshot",
+	Default = false,
+	Save = true,
+	Flag = "Slingshot",
 	Callback = function()
-		modifyToolAttributes("Slingshot", {
-			Capacity = 10000,
-			ChargeRate = 0,
-			Firerate = 0,
-			Spread = 0,
-			ProjectileSpeed = 2250
-		})
+		while Value do
+		    modifyToolAttributes("Slingshot", {
+			    Capacity = 10000,
+			    ChargeRate = 0,
+			    Firerate = 0,
+			    Spread = 0,
+			    ProjectileSpeed = 2250
+		    })
+		end
 	end
 })
 
 -- Button for Modded Flamethrower
-Section2:AddButton({
+Section2:AddToggle({
 	Name = "Modded Flamethrower",
-	Callback = function()
-		modifyToolAttributes("Flamethrower", {
-			Cooldown = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Flamethrower",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Flamethrower", {
+			    Cooldown = 0
+		    })
+        end
 	end
 })
 
@@ -93,37 +118,66 @@ local Section3 = Tab:AddSection({ Name = "Paintball Gun" })
 Section3:AddParagraph("Paintball Gun", "Ah, yes! The good ol' ranged guns!")
 
 -- Button for Modded Paintball Gun
-Section3:AddButton({
+Section3:AddToggle({
 	Name = "Modded Paintball Gun",
+	Default = false,
+	Save = true,
+	Flag = "Paintball_Gun",
 	Callback = function()
-		modifyToolAttributes("Paintball Gun", {
-			Firerate = 0,
-			ProjectileSpeed = 2250
-		})
+        while Value do
+		    modifyToolAttributes("Paintball Gun", {
+			    Firerate = 0,
+			    ProjectileSpeed = 2250
+		    })
+        end
 	end
 })
 
 -- Button for Modded BB Gun
-Section3:AddButton({
+Section3:AddToggle({
 	Name = "Modded BB Gun",
-	Callback = function()
-		modifyToolAttributes("BB Gun", {
-			Firerate = 0,
-			MinShots = 2,
-			MaxShots = math.huge -- Use `math.huge` for infinite value
-		})
+	Default = false,
+	Save = true,
+	Flag = "BB_Gun",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("BB Gun", {
+			    Firerate = 0,
+			    MinShots = 2,
+			    MaxShots = math.huge -- Use `math.huge` for infinite value
+		    })
+        end
 	end
 })
 
 -- Button for Modded Freeze Ray
-Section3:AddButton({
-	Name = "Modded Freeze Ray",
+Section3:AddToggle({
+	Name = "Modded Freeze Ray (Always Charged)",
+	Default = false,
+	Save = true,
+	Flag = "Freeze_Ray",
 	Callback = function()
-		modifyToolAttributes("Freeze Ray", {
-			Firerate = 0,
-			ProjectileSpeed = 2250,
-			ChargeTime = 0
-		})
+        while Value do
+		    modifyToolAttributes("Freeze Ray", {
+			    Firerate = 0,
+			    ProjectileSpeed = 2250,
+			    ChargeTime = 0
+		    })
+        end
+	end
+})
+Section3:AddToggle({
+	Name = "Modded Freeze Ray (Hold to Charge)",
+	Default = false,
+	Save = true,
+	Flag = "Freeze_RayCharge",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Freeze Ray", {
+			    Firerate = 0,
+			    ProjectileSpeed = 2250,
+		    })
+        end
 	end
 })
 
@@ -131,26 +185,36 @@ local Section4 = Tab:AddSection({ Name = "Superball" })
 Section4:AddParagraph("Superball", "Bounce.")
 
 -- Button for Modded Ninja Stars
-Section4:AddButton({
+Section4:AddToggle({
 	Name = "Modded Ninja Stars",
-	Callback = function()
-		modifyToolAttributes("Ninja Stars", {
-			ThrowRate = 0,
-			Capacity = 10000000,
-			ChargeRate = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Ninja_Stars",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Ninja Stars", {
+			    ThrowRate = 0,
+			    Capacity = 10000000,
+			    ChargeRate = 0
+		    })
+        end
 	end
 })
 
 -- Button for Modded Bazooka
-Section4:AddButton({
+Section4:AddToggle({
 	Name = "Modded Bazooka",
-	Callback = function()
-		modifyToolAttributes("Bazooka", {
-			ReloadTick = 0,
-			Capacity = 100,
-			PassiveReloadTick = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Bazooka",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Bazooka", {
+			    ReloadTick = 0,
+			    Capacity = 100,
+			    PassiveReloadTick = 0
+		    })
+        end
 	end
 })
 
@@ -158,22 +222,32 @@ local Section5 = Tab:AddSection({ Name = "Timebomb" })
 Section5:AddParagraph("Timebomb", "Chat is this real?")
 
 -- Button for Modded Subspace Tripmine
-Section5:AddButton({
+Section5:AddToggle({
 	Name = "Modded Subspace Tripmine",
-	Callback = function()
-		modifyToolAttributes("Subspace Tripmine", {
-			Cooldown = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Subspace_Tripmine",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Subspace Tripmine", {
+			    Cooldown = 0
+		    })
+        end
 	end
 })
 
 -- Button for Modded Explosive Pinata
-Section5:AddButton({
+Section5:AddToggle({
 	Name = "Modded Explosive Pinata",
-	Callback = function()
-		modifyToolAttributes("Explosive Pinata", {
-			Cooldown = 0
-		})
+	Default = false,
+	Save = true,
+	Flag = "Explosive_Pinata",
+	Callback = function(Value)
+        while Value do
+		    modifyToolAttributes("Explosive Pinata", {
+			    Cooldown = 0
+		    })
+        end
 	end
 })
 
@@ -183,6 +257,8 @@ local Section6 = Tab:AddSection({ Name = "Trowel" })
 Section6:AddToggle({
 	Name = "Frozen Wrench",
 	Default = false,
+	Save = true,
+	Flag = "Wrench",
 	Callback = function(Value)
 		local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Wrench") or game.Players.LocalPlayer.Character:FindFirstChild("Wrench")
 		if tool then
