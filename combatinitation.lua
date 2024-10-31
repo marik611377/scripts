@@ -302,13 +302,33 @@ Tab2:AddButton({
 	end
 })
 
+Tab2:AddTextbox({
+	Name = "Melee Range (5 = +500%)",
+	Default = "5",
+	TextDisappear = false,
+	Flag = "meleerangevalue",
+	Callback = function(Value)
+		OrionLib.Flags["meleerangevalue"] = { Value = Value }
+	end	  
+})
+
+Tab2:AddTextbox({
+	Name = "Pogo Range (5 = +500%)",
+	Default = "5",
+	TextDisappear = false,
+	Flag = "pogorangevalue",
+	Callback = function(Value)
+		OrionLib.Flags["pogorangevalue"] = { Value = Value }
+	end	  
+})
+
 Tab2:AddButton({
 	Name = "Bandit/Stage Prop (Melee Range & Pogo Range)",
 	Callback = function()
 		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
 		if accessoryEffects then
-			accessoryEffects:SetAttribute("Melee_Range", 5)
-			accessoryEffects:SetAttribute("Pogo_Range", 5)
+			accessoryEffects:SetAttribute("Melee_Range", OrionLib.Flags["meleerangevalue"].Value)
+			accessoryEffects:SetAttribute("Pogo_Range", OrionLib.Flags["pogorangevalue"].Value)
 		else
 			print("AccessoryEffects not found.")
 		end
