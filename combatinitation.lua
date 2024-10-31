@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Combat Initation Script (v2.1.1)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Combat Initation Script (v2.1.2)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 -- Function to modify tool attributes safely (check both Backpack and equipped tools)
 local function modifyToolAttributes(toolName, attributes)
@@ -276,8 +276,8 @@ local Tab4 = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab4:AddParagraph("v2.1.1", "Updated for")
-Tab4:AddParagraph("v1.3 ALPHA", "Current version")
+Tab4:AddParagraph("v2.1.2", "Updated for")
+Tab4:AddParagraph("v1.4 ALPHA", "Current version")
 Tab4:AddParagraph("marik611277", "Made by")
 Tab4:AddParagraph("Synapse X Remake", "Created firstly in")
 Tab4:AddParagraph("Non-GUI script", "Inspired by")
