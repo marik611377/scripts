@@ -202,11 +202,24 @@ local Tab2 = Window:MakeTab({
 
 -- Button for Electric Punk
 Tab2:AddButton({
-	Name = "Electric Punk",
+	Name = "Electric Punk (Lighting Chance)",
 	Callback = function()
 		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
 		if accessoryEffects then
 			accessoryEffects:SetAttribute("Lightning_Chance", 100)
+		else
+			print("AccessoryEffects not found.")
+		end
+	end
+})
+
+Tab2:AddButton({
+	Name = "Bandit/Stage Prop (Melee Range & Pogo Range)",
+	Callback = function()
+		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
+		if accessoryEffects then
+			accessoryEffects:SetAttribute("Melee_Range", 5)
+			accessoryEffects:SetAttribute("Pogo_Range", 5)
 		else
 			print("AccessoryEffects not found.")
 		end
