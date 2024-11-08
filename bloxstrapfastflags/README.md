@@ -5,6 +5,9 @@
 > Ignore above
 
 > [!CAUTION]
+> Gravity fastflags no longer work. It was fun while it lasted :)
+
+> [!CAUTION]
 > List uses an older verison of it.
 
 <h3 align="center">
