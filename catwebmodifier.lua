@@ -173,6 +173,7 @@ function CatWebModifier.new(ButtonConfig)
 		task.spawn(function()
     task.wait(2)
     FireEvent({})
+			end)
 end)
 FireEvent({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
