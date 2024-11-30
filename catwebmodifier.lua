@@ -2,7 +2,7 @@ local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScrip
 local redirecttext = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("main"):FindFirstChild("UI"):FindFirstChild("redirect"):FindFirstChild("TextLabel")
 redirecttext.RichText = true
 local function FireEvent(args)
-    event:Fire(unpack(args))
+    game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice"):Fire(unpack(args))
 end
 FireEvent({
     [1] = '<font color="#FF0">CatWebModifier loading</font>';
