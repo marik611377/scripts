@@ -1,13 +1,12 @@
 local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
 local redirecttext = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("main"):FindFirstChild("UI"):FindFirstChild("redirect"):FindFirstChild("TextLabel")
 redirecttext.RichText = true
-local args = {
-    [1] = '<font color="#FF0">CatWebModifier loading</font>';
-}
-local function FireEvent()
+local function FireEvent(args)
     event:Fire(unpack(args))
 end
-FireEvent()
+FireEvent({
+    [1] = '<font color="#FF0">CatWebModifier loading</font>';
+})
 local CatWebModifier = {
     label = {},
     presets = {
@@ -48,10 +47,9 @@ local function V2(x, y)
     local vector = Vector2.new(x, y)
     return vector
 end
-args = {
-    [1] = '<font color="#FF0">CatWebModifier: Setting elements</font>';
-}
-FireEvent()
+FireEvent({
+    [1] = '<font color="#FF0">CatWebModifier: creating elements</font>';
+})
 local presetbutton = SetProps(NewInstance("TextButton"), {
     Name = "presetbutton",
     Text = "Test <test>",
@@ -128,9 +126,9 @@ local presetlabeltext = SetProps(NewInstance("TextLabel"), {
     TextTransparency = 0.1,
     Parent = presetlabel
 })
-args = {
-    [1] = '<font color="#FF0">CatWebModifier: Setting functions</font>';
-}
+FireEvent({
+    [1] = '<font color="#FF0">CatWebModifier: creating functions</font>';
+})
 function CatWebModifier.label.new(text)
     local holder = PlayerGui.main.UI:GetChildren()
     for i,v in pairs(holder) do
@@ -152,6 +150,9 @@ end
 function CatWebModifier.new(ButtonConfig)
     ButtonConfig.Text = ButtonConfig.Text or ""
     ButtonConfig.Icon = ButtonConfig.Icon or ""
+    FireEvent({
+        [1] = '<font color="#FF0">CatWebModifier: creating button with args: <br/>Text =' .. ButtonConfig.Text ..' <br/>Icon = ' .. ButtonConfig.Icon .. '  ('.. FormatAsset(ButtonConfig.Icon) .. ') <br/>RBXAsset = ' .. ButtonConfig.RBXAsset' </font>';
+    })
     ButtonConfig.RBXAsset = ButtonConfig.RBXAsset or false
     local holder = PlayerGui.main.UI:GetChildren()
     for i,v in pairs(holder) do
@@ -166,15 +167,18 @@ function CatWebModifier.new(ButtonConfig)
                 end
             end
         end
-    end
-end
-args = {
+		FireEvent({
+				[1] = '<font color="#0F0">CatWebModifier: Created</font>'
+		})
+		task.spawn(function()
+    task.wait(2)
+    FireEvent({})
+end)
+FireEvent({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
-}
-FireEvent()
+})
 task.spawn(function()
     task.wait(2)
-    args = {}
-    FireEvent()
+    FireEvent({})
 end)
 return CatWebModifier
