@@ -6,6 +6,7 @@ local presets = {
     client = "Debugger/Breakpoints/client.png";
     client2x = "Debugger/Breakpoints/client@2x.png";
 }
+table.insert(CatWebModifier, presets)
 local PlayerGui = game.Players.LocalPlayer.PlayerGui
 local function FormatAsset(id, rbxasset)
     local formattedasset = ""
