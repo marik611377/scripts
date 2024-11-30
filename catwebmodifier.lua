@@ -151,7 +151,7 @@ function CatWebModifier.new(ButtonConfig)
     ButtonConfig.Text = ButtonConfig.Text or ""
     ButtonConfig.Icon = ButtonConfig.Icon or ""
     FireEvent({
-        [1] = '<font color="#FF0">CatWebModifier: creating button with args: <br/>Text =' .. ButtonConfig.Text ..' <br/>Icon = ' .. ButtonConfig.Icon .. '  ('.. FormatAsset(ButtonConfig.Icon) .. ') <br/>RBXAsset = ' .. ButtonConfig.RBXAsset' </font>';
+        [1] = '<font color="#FF0">CatWebModifier: creating button with args: <br/>Text =' .. ButtonConfig.Text ..' <br/>Icon = ' .. ButtonConfig.Icon .. '  ('.. FormatAsset(ButtonConfig.Icon) .. ') <br/>RBXAsset = ' .. ButtonConfig.RBXAsset .. ' </font>';
     })
     ButtonConfig.RBXAsset = ButtonConfig.RBXAsset or false
     local holder = PlayerGui.main.UI:GetChildren()
