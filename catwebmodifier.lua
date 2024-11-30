@@ -106,31 +106,6 @@ local presetlabeltext = SetProps(NewInstance("TextLabel"), {
     TextTransparency = 0.1,
     Parent = presetlabel
 })
-function CatWebModifier.new(icon, text, rbxasset)
-    local holder = PlayerGui.main.UI:GetChildren()
-    for i,v in pairs(holder) do
-        print("i: " .. tostring(i))
-        print("v: " .. tostring(v))
-        if v:GetAttribute("webcontent") == true then
-            print("success")
-            if v:FindFirstChild("modals") then
-                for ii,vv in pairs(v.modals:GetChildren()) do
-                    local container = vv:WaitForChild("container")
-                    local clone = presetbutton:Clone()
-                    clone.Text = text
-                    if not rbxasset then
-                        print(FormatAsset(icon, false))
-                        clone["presetimage"].Image = FormatAsset(icon, false)
-                    else
-                        print(FormatAsset(icon, true))
-                        clone["presetimage"].Image = FormatAsset(icon, true)
-                    end
-                    clone.Parent = container
-                end
-            end
-        end
-    end
-end
 function CatWebModifier.label.new(text)
     local holder = PlayerGui.main.UI:GetChildren()
     for i,v in pairs(holder) do
@@ -149,7 +124,7 @@ function CatWebModifier.label.new(text)
         end
     end
 end
-function DangerCatwebModifier.new(ButtonConfig)
+function CatWebModifier.new(ButtonConfig)
     ButtonConfig.Text = ButtonConfig.Text or ""
     ButtonConfig.Icon = ButtonConfig.Icon or ""
     ButtonConfig.RBXAsset = ButtonConfig.RBXAsset or false
@@ -168,3 +143,4 @@ function DangerCatwebModifier.new(ButtonConfig)
         end
     end
 end
+return CatWebModifier
