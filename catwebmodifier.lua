@@ -175,6 +175,7 @@ function CatWebModifier.new(ButtonConfig)
     FireEvent({})
 			end)
 end)
+end)
 FireEvent({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
 })
