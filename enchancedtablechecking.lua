@@ -80,3 +80,4 @@ function EnchanedTableChecking:CheckTable(tbl)
 end
 warn("[EnchancedTableChecking] -- Successfully loaded (" .. tick() .. ")")
 return EnchanedTableChecking
+print("This should cause an error")
