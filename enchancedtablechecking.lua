@@ -78,6 +78,4 @@ function EnchanedTableChecking:CheckTable(tbl)
     end
     print(string.format(string)  .. string.format(string2 .. "Total: " .. total .. "\nItems: " .. items .. "\nSubitems: " .. subitems .. "\n" .. tab()))
 end
-warn("[EnchancedTableChecking] -- Successfully loaded (" .. tick() .. ")")
 return EnchanedTableChecking
-print("This should cause an error")
