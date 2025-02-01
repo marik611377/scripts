@@ -3,6 +3,7 @@ local G2L = {};
 -- StarterGui.jjsshower
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[jjsshower]];
+G2L["1"]["ResetOnSpawn"] = false
 
 
 -- StarterGui.jjsshower.HP
