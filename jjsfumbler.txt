@@ -127,8 +127,6 @@ local function GetTeam(Character)
 end
 
 local plr = game.Players.LocalPlayer
-local cant = false
-local cant2 = false
 
 local event1 = G2L["7"].MouseButton1Click:Connect(function()
     local dont = false
@@ -154,6 +152,7 @@ end)
 
 local event3 = G2L["9"].MouseButton1Click:Connect(function()
     for i,v in pairs(workspace.Characters:GetChildren()) do
+        task.wait(0.01)
         local dont = false
         local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
         if highlight then dont = true end
