@@ -1,0 +1,103 @@
+local G2L = {};
+
+-- StarterGui.jjsshower
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[jjsshower]];
+
+
+-- StarterGui.jjsshower.HP
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["2"]["Size"] = UDim2.new(0, 30, 0, 510);
+G2L["2"]["Position"] = UDim2.new(0.10897, 0, 0.15909, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[HP]];
+G2L["2"]["BackgroundTransparency"] = 0.6;
+
+
+-- StarterGui.jjsshower.HP.UIStroke
+G2L["3"] = Instance.new("UIStroke", G2L["2"]);
+G2L["3"]["Thickness"] = 3;
+
+
+-- StarterGui.jjsshower.HP.Bar
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4"]["Size"] = UDim2.new(1, 0, 0.5, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Name"] = [[Bar]];
+
+
+-- StarterGui.jjsshower.HP.Bar.UIGradient
+G2L["5"] = Instance.new("UIGradient", G2L["4"]);
+G2L["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(71, 71, 71)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+
+-- StarterGui.jjsshower.Ultimate
+G2L["6"] = Instance.new("Frame", G2L["1"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(76, 76, 76);
+G2L["6"]["Size"] = UDim2.new(0, 10, 0, 475);
+G2L["6"]["Position"] = UDim2.new(0.17308, 0, 0.18316, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Ultimate]];
+G2L["6"]["BackgroundTransparency"] = 0.6;
+
+
+-- StarterGui.jjsshower.Ultimate.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["6"]);
+G2L["7"]["Thickness"] = 2;
+
+
+-- StarterGui.jjsshower.Ultimate.Bar
+G2L["8"] = Instance.new("Frame", G2L["6"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 171, 0);
+G2L["8"]["Size"] = UDim2.new(1, 0, 0.5, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Bar]];
+
+
+-- StarterGui.jjsshower.Ultimate.Bar.UIGradient
+G2L["9"] = Instance.new("UIGradient", G2L["8"]);
+G2L["9"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(145, 145, 145)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
+
+local plr = game.Players.LocalPlayer
+local ts = game:GetService("TweenService")
+local ti = TweenInfo.new(0.2)
+
+local function Write(num, one, two)
+    if num == 1 then
+        ts:Create(G2L["4"], ti, {Size = UDim2.new(1, 0, one / two, 0)}):Play()
+    end
+    if num == 2 then
+        ts:Create(G2L["8"], ti, {Size = UDim2.new(1, 0, one / two, 0)}):Play()
+    end
+end
+
+local function Hit()
+    local mouse = plr:GetMouse()
+    if mouse.Target then
+        if mouse.Target.Parent:FindFirstChild("Humanoid") then
+            return mouse.Target.Parent
+        else
+           return nil
+        end
+    end
+end
+local lastValidPerson = nil
+while true do
+    task.wait(0.01)
+    local hit = Hit()
+    if hit then
+        lastValidPerson = hit
+    end
+    if lastValidPerson then
+        if game.Players:GetPlayerFromCharacter(lastValidPerson) then
+            Write(2, game.Players:GetPlayerFromCharacter(lastValidPerson):GetAttribute("Ultimate") or 0, 100)
+        end
+        Write(1, lastValidPerson.Humanoid.Health, lastValidPerson.Humanoid.MaxHealth)
+    end
+end

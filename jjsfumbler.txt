@@ -1,0 +1,227 @@
+-- W Luna
+local G2L = {};
+
+-- StarterGui.jjsfumbler
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[jjsfumbler]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.jjsfumbler.holder
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(81, 81, 81);
+G2L["2"]["ClipsDescendants"] = true;
+G2L["2"]["Size"] = UDim2.new(0, 200, 0, 300);
+G2L["2"]["Position"] = UDim2.new(0.03098, 0, 0.22807, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[holder]];
+
+
+-- StarterGui.jjsfumbler.holder.topbar
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(103, 103, 103);
+G2L["3"]["Size"] = UDim2.new(1, 0, 0, 20);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[topbar]];
+
+
+-- StarterGui.jjsfumbler.holder.topbar.close
+G2L["4"] = Instance.new("TextButton", G2L["3"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextColor3"] = Color3.fromRGB(114, 0, 0);
+G2L["4"]["TextSize"] = 25;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 20, 0, 20);
+G2L["4"]["Name"] = [[close]];
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[x]];
+G2L["4"]["Position"] = UDim2.new(0.9, 0, 0, 0);
+
+
+-- StarterGui.jjsfumbler.holder.topbar.title
+G2L["5"] = Instance.new("TextLabel", G2L["3"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextSize"] = 15;
+G2L["5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Size"] = UDim2.new(0, 180, 0, 20);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Jujutsu Shenanigans Fumbler]];
+G2L["5"]["Name"] = [[title]];
+
+
+-- StarterGui.jjsfumbler.holder.topbar.title.UIPadding
+G2L["6"] = Instance.new("UIPadding", G2L["5"]);
+G2L["6"]["PaddingLeft"] = UDim.new(0, 5);
+
+
+-- StarterGui.jjsfumbler.holder.fumble
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 5;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 18;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["7"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["7"]["Size"] = UDim2.new(0, 170, 0, 41);
+G2L["7"]["Name"] = [[fumble]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["7"]["Text"] = [[Fumble]];
+G2L["7"]["Position"] = UDim2.new(0.075, 0, 0.1, 0);
+
+
+-- StarterGui.jjsfumbler.holder.unfumble
+G2L["8"] = Instance.new("TextButton", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 5;
+G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextSize"] = 18;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["8"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["8"]["Size"] = UDim2.new(0, 170, 0, 41);
+G2L["8"]["Name"] = [[unfumble]];
+G2L["8"]["BorderColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["8"]["Text"] = [[Unfumble]];
+G2L["8"]["Position"] = UDim2.new(0.075, 0, 0.33333, 0);
+
+
+-- StarterGui.jjsfumbler.holder.highlight
+G2L["9"] = Instance.new("TextButton", G2L["2"]);
+G2L["9"]["BorderSizePixel"] = 5;
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["TextSize"] = 18;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["9"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["9"]["Size"] = UDim2.new(0, 170, 0, 41);
+G2L["9"]["Name"] = [[highlight]];
+G2L["9"]["BorderColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["9"]["Text"] = [[Highlight]];
+G2L["9"]["Position"] = UDim2.new(0.075, 0, 0.56, 0);
+
+
+-- StarterGui.jjsfumbler.holder.unhighlight
+G2L["a"] = Instance.new("TextButton", G2L["2"]);
+G2L["a"]["BorderSizePixel"] = 5;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 18;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["a"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["a"]["Size"] = UDim2.new(0, 170, 0, 41);
+G2L["a"]["Name"] = [[unhighlight]];
+G2L["a"]["BorderColor3"] = Color3.fromRGB(55, 55, 55);
+G2L["a"]["Text"] = [[Unhighlight]];
+G2L["a"]["Position"] = UDim2.new(0.075, 0, 0.75333, 0);
+
+local function GetTeam(Character)
+    local plr = game.Players:GetPlayerFromCharacter(Character)
+    return plr.Team
+end
+
+local plr = game.Players.LocalPlayer
+local cant = false
+local cant2 = false
+
+local event1 = G2L["7"].MouseButton1Click:Connect(function()
+    local dont = false
+    local stun = plr.Character.Info:FindFirstChild("Stun")
+    if stun then
+        dont = true
+    end
+    if not dont then
+        local stun = Instance.new("BoolValue")
+        stun.Name = "Stun"
+        stun.Parent = plr.Character.Info
+    end
+    plr.Character:SetAttribute("Ragdoll", 2)
+end)
+
+local event2 = G2L["8"].MouseButton1Click:Connect(function()
+	local stun = plr.Character.Info:FindFirstChild("Stun")
+    if stun then
+        stun:Destroy()
+    end
+    plr.Character:SetAttribute("Ragdoll", 0)
+end)
+
+local event3 = G2L["9"].MouseButton1Click:Connect(function()
+    for i,v in pairs(workspace.Characters:GetChildren()) do
+        local dont = false
+        local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+        if highlight then dont = true end
+        local plrTeam = game.Players:GetPlayerFromCharacter(v)
+        if plrTeam and plrTeam.Team then
+            plrTeam = plrTeam.Team.Name
+        end
+        if not dont then
+            local highlight = Instance.new("Highlight", v)
+            print(plrTeam)
+            if v.Humanoid.Health > 0 and plrTeam == "Strongest of History" then
+                highlight.FillColor = Color3.fromRGB(255, 255, 0)
+                v.Humanoid.Died:Connect(function()
+                    local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+                    if highlight then
+                        highlight.FillColor = Color3.fromRGB(0, 255, 0)
+                        highlight.OutlineColor = Color3.fromRGB(0, 0, 0)
+                    end
+                end)
+            elseif v.Humanoid.Health > 0 and plrTeam == "Curses" then
+                highlight.FillColor = Color3.fromRGB(50, 0, 255)
+                v.Humanoid.Died:Connect(function()
+                    local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+                    if highlight then
+                        highlight.FillColor = Color3.fromRGB(50, 0, 100)
+                        highlight.OutlineColor = Color3.fromRGB(50, 0, 0)
+                    end
+                end)
+            elseif v.Humanoid.Health > 0 and plrTeam == "Sorcerers" then
+                highlight.FillColor = Color3.fromRGB(0, 230, 230)
+                v.Humanoid.Died:Connect(function()
+                    local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+                    if highlight then
+                        highlight.FillColor = Color3.fromRGB(0, 100, 100)
+                        highlight.OutlineColor = Color3.fromRGB(50, 0, 0)
+                    end
+                end)
+            elseif v.Humanoid.Health > 0 then
+                highlight.FillColor = Color3.fromRGB(237, 255, 156)
+                v.Humanoid.Died:Connect(function()
+                    local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+                    if highlight then
+                        highlight.FillColor = Color3.fromRGB(255, 0, 0)
+                        highlight.OutlineColor = Color3.fromRGB(50, 0, 0)
+                    end
+                end)
+            else
+                highlight.FillColor = Color3.fromRGB(255, 0, 0)
+                highlight.OutlineColor = Color3.fromRGB(50, 0, 0)
+            end
+            highlight.Name = "CHARACTERHIGHLIGHTER"
+        end
+    end
+end)
+
+local event4 = G2L["a"].MouseButton1Click:Connect(function()
+    for i,v in pairs(workspace.Characters:GetChildren()) do
+        local highlight = v:FindFirstChild("CHARACTERHIGHLIGHTER")
+        if highlight then
+            highlight:Destroy()
+        end
+    end
+end)
+
+local event5 = G2L["4"].MouseButton1Click:Connect(function()
+	G2L["1"]:Destroy()
+    event1:Disconnect()
+    event2:Disconnect()
+    event3:Disconnect()
+    event4:Disconnect()
+end)
