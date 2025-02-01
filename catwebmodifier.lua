@@ -183,6 +183,6 @@ SetRedirectText({
 task.spawn(function()
     task.wait(2)
     SetRedirectText({[1] = ""})
-end
+end)
 print("[CatWebModifier] returning")
 return CatWebModifier
