@@ -1,11 +1,11 @@
 warn("preload")
-local function FireEvent(args)
+local function SetRedirectText(args)
     local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
     event:Fire(unpack(args))
     local redirecttext = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("main"):FindFirstChild("UI"):FindFirstChild("redirect"):FindFirstChild("TextLabel")
     redirecttext.RichText = true
 end
-FireEvent({
+SetRedirectText({
     [1] = '<font color="#FF0">CatWebModifier loading</font>';
 })
 local CatWebModifier = {
@@ -49,7 +49,7 @@ local function V2(x, y)
     local vector = Vector2.new(x, y)
     return vector
 end
-FireEvent({
+SetRedirectText({
     [1] = '<font color="#FF0">CatWebModifier: creating elements</font>';
 })
 warn("element create")
@@ -129,7 +129,7 @@ local presetlabeltext = SetProps(NewInstance("TextLabel"), {
     TextTransparency = 0.1,
     Parent = presetlabel
 })
-FireEvent({
+SetRedirectText({
     [1] = '<font color="#FF0">CatWebModifier: creating functions</font>';
 })
 warn("function create")
@@ -154,7 +154,7 @@ end
 function CatWebModifier.new(ButtonConfig)
     ButtonConfig.Text = ButtonConfig.Text or ""
     ButtonConfig.Icon = ButtonConfig.Icon or ""
-    FireEvent({
+    SetRedirectText({
         [1] = '<font color="#FF0">CatWebModifier: creating button with args: <br/>Text =' .. ButtonConfig.Text ..' <br/>Icon = ' .. ButtonConfig.Icon .. '  ('.. FormatAsset(ButtonConfig.Icon) .. ') <br/>RBXAsset = ' .. ButtonConfig.RBXAsset .. ' </font>';
     })
     ButtonConfig.RBXAsset = ButtonConfig.RBXAsset or false
@@ -172,21 +172,21 @@ function CatWebModifier.new(ButtonConfig)
             end
         end
 	end
-	FireEvent({
+	SetRedirectText({
 	    [1] = '<font color="#0F0">CatWebModifier: Created</font>'
 	})
 	task.spawn(function()
         task.wait(2)
-        FireEvent({[1] = ""})
+        SetRedirectText({[1] = ""})
 	end)
 end)
 warn("loaded")
-FireEvent({
+SetRedirectText({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
 })
 task.spawn(function()
     task.wait(2)
-    FireEvent({[1] = ""})
+    SetRedirectText({[1] = ""})
 end)
 warn("return")
 return CatWebModifier
