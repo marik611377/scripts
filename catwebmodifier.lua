@@ -171,14 +171,14 @@ function CatWebModifier.new(ButtonConfig)
                 end
             end
         end
-		end
-		FireEvent({
-				[1] = '<font color="#0F0">CatWebModifier: Created</font>'
-		})
-		task.spawn(function()
-    task.wait(2)
-    FireEvent({[1] = ""})
-		end)
+	end
+	FireEvent({
+	    [1] = '<font color="#0F0">CatWebModifier: Created</font>'
+	})
+	task.spawn(function()
+        task.wait(2)
+        FireEvent({[1] = ""})
+	end)
 end)
 warn("loaded")
 FireEvent({
