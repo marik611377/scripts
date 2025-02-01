@@ -175,7 +175,7 @@ function CatWebModifier.new(ButtonConfig)
 	SetRedirectText({
 	    [1] = '<font color="#0F0">CatWebModifier: Created</font>'
 	})
-end)
+end
 print("loaded")
 SetRedirectText({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>'
