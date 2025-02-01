@@ -1,9 +1,4 @@
 warn("preload")
-
-
-
-
-
 local function SetRedirectText(args)
     local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
     event:Fire(unpack(args))
@@ -189,9 +184,5 @@ warn("loaded")
 SetRedirectText({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
 })
-task.spawn(function()
-    task.wait(2)
-    SetRedirectText({[1] = ""})
-end)
 warn("return")
 return CatWebModifier
