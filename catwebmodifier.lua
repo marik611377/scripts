@@ -1,4 +1,4 @@
-warn("preload")
+print("preload")
 local function SetRedirectText(args)
     local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
     event:Fire(unpack(args))
@@ -24,7 +24,7 @@ local presets = {
     client = "Debugger/Breakpoints/client.png";
     client2x = "Debugger/Breakpoints/client@2x.png";
 }
-warn("load")
+print("load")
 local PlayerGui = game.Players.LocalPlayer.PlayerGui
 local function FormatAsset(id, rbxasset)
     local formattedasset = ""
@@ -52,7 +52,7 @@ end
 SetRedirectText({
     [1] = '<font color="#FF0">CatWebModifier: creating elements</font>';
 })
-warn("element create")
+print("element create")
 local presetbutton = SetProps(NewInstance("TextButton"), {
     Name = "presetbutton",
     Text = "Test <test>",
@@ -132,7 +132,7 @@ local presetlabeltext = SetProps(NewInstance("TextLabel"), {
 SetRedirectText({
     [1] = '<font color="#FF0">CatWebModifier: creating functions</font>';
 })
-warn("function create")
+print("function create")
 function CatWebModifier.label.new(text)
     local holder = PlayerGui.main.UI:GetChildren()
     for i,v in pairs(holder) do
@@ -176,9 +176,9 @@ function CatWebModifier.new(ButtonConfig)
 	    [1] = '<font color="#0F0">CatWebModifier: Created</font>'
 	})
 end)
-warn("loaded")
+print("loaded")
 SetRedirectText({
-    [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>';
+    [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>'
 })
-warn("return")
+print("[CatWebModifier] returning")
 return CatWebModifier
