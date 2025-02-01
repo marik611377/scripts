@@ -1,9 +1,9 @@
 warn("preload")
-local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
-local redirecttext = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("main"):FindFirstChild("UI"):FindFirstChild("redirect"):FindFirstChild("TextLabel")
-redirecttext.RichText = true
 local function FireEvent(args)
-    game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice"):Fire(unpack(args))
+	local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
+    event:Fire(unpack(args))
+	local redirecttext = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui"):FindFirstChild("main"):FindFirstChild("UI"):FindFirstChild("redirect"):FindFirstChild("TextLabel")
+	redirecttext.RichText = true
 end
 FireEvent({
     [1] = '<font color="#FF0">CatWebModifier loading</font>';
@@ -177,7 +177,7 @@ function CatWebModifier.new(ButtonConfig)
 		})
 		task.spawn(function()
     task.wait(2)
-    FireEvent({})
+    FireEvent({[1] = ""})
 		end)
 end)
 warn("loaded")
@@ -186,7 +186,7 @@ FireEvent({
 })
 task.spawn(function()
     task.wait(2)
-    FireEvent({})
+    FireEvent({[1] = ""})
 end)
 warn("return")
 return CatWebModifier
