@@ -1,4 +1,9 @@
 warn("preload")
+
+
+
+
+
 local function SetRedirectText(args)
     local event = game:GetService("Players").LocalPlayer:FindFirstChild("PlayerScripts"):FindFirstChild("main"):FindFirstChild("website"):FindFirstChild("webrenderer"):FindFirstChild("linkNotice")
     event:Fire(unpack(args))
