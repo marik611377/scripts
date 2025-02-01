@@ -9,11 +9,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/m
 <br/>
 *Fumbler*
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/jjsfumbler.txt')()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/jjsfumbler.txt'))()
 ```
 
 *Health and Ult Shower*
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/jjsshower.txt')()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/jjsshower.txt'))()
 ```
