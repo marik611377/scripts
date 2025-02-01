@@ -180,5 +180,9 @@ print("loaded")
 SetRedirectText({
     [1] = '<font color="#0F0">CatWebModifier loaded successfully</font>'
 })
+task.spawn(function()
+    task.wait(2)
+    SetRedirectText({[1] = ""})
+end
 print("[CatWebModifier] returning")
 return CatWebModifier
