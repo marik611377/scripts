@@ -175,10 +175,6 @@ function CatWebModifier.new(ButtonConfig)
 	SetRedirectText({
 	    [1] = '<font color="#0F0">CatWebModifier: Created</font>'
 	})
-	task.spawn(function()
-        task.wait(2)
-        SetRedirectText({[1] = ""})
-	end)
 end)
 warn("loaded")
 SetRedirectText({
