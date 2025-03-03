@@ -21,6 +21,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/r
 **Universal**
 <br/>
 *Notifier*
+<h6>Not documented yet</h6>
 ```lua
 loadstring(game:HttpGet('https://raw.githubussercontent.com/marik611377/scripts/refs/heads/main/notifier.lua'))()
 ```
