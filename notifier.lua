@@ -21,7 +21,7 @@ local order = {}
 
 local function Update()
     for i,v in pairs(order) do
-        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, (25 * (i - 1)) + 10)}):Play()
+        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 35 * (i - 1))}):Play()
     end
 end
 
@@ -38,7 +38,7 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     duration = duration or 3
     color = color or Color3.new(1, 1, 1)
     textcolor = textcolor or Color3.new(0, 0, 0)
-    notify.Size = UDim2.new(1, 0, 0, 25)
+    notify.Size = UDim2.new(1, 0, 0, 35)
     notify.BackgroundColor3 = color
     notify.TextColor3 = textcolor
     notify.Text = text
