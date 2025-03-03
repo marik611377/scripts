@@ -24,6 +24,7 @@ local function Update()
         print(25 * (i - 1))
         ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * (i - 1))}):Play()
     end
+    print("Finished!")
 end
 
 function notifier.new(text: string, duration: number, color: Color3, textcolor: Color3)
