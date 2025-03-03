@@ -19,8 +19,8 @@ function notifier.new(text: string, duration: number, color: Color3)
     task.spawn(function()
         task.wait(duration)
         local tween = ts:Create(notify, ti, {
-                    BackgroundTransparency = 1
-                    TextTransparency = 1
+            BackgroundTransparency = 1,
+            TextTransparency = 1
         }) 
         tween:Play()
         tween.Completed:Connect(function()
