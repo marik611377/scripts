@@ -4,10 +4,29 @@ gui.Name = "Notifier"
 
 local ts = game:GetService("TweenService")
 local ti = TweenInfo.new(0.7)
+local ti2 = TweenInfo.new(1)
+
+string.random = function(length)
+    local chars = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    local final = ""
+    for i = 1, length do
+        local randomIndex = math.random(1, #chars)
+        final = final .. string.sub(chars, randomIndex, randomIndex)
+    end
+    return final
+end
 
 local notifier = {}
+local order = {}
+
+local function Update()
+    for i,v in pairs(order) do
+        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * i)}:Play()
+    end
+end
 
 function notifier.new(text: string, duration: number, color: Color3, textcolor: Color3)
+    local id = string.random(10)
     local notify = Instance.new("TextLabel")
     text = text or "nil"
     duration = duration or 3
@@ -21,7 +40,10 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     notify.AutomaticSize = Enum.AutomaticSize.Y
     notify.Font = Enum.Font.Roboto
     notify.BorderSizePixel = 0
+    notify.Name = id
     notify.Parent = gui
+    table.insert(order, id)
+    Update()
     task.spawn(function()
         task.wait(duration)
         local tween = ts:Create(notify, ti, {
@@ -31,6 +53,11 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
         tween:Play()
         tween.Completed:Connect(function()
             notify.Parent = nil
+            for i,v in pairs(order) do
+                if v == id then
+                    table.remove(i)
+                end
+            end
         end)
     end)
 end
