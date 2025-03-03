@@ -21,7 +21,9 @@ local order = {}
 
 local function Update()
     for i,v in pairs(order) do
-        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * i)}):Play()
+        if i == not 1 then
+            ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * i)}):Play()
+        end
     end
 end
 
