@@ -59,6 +59,7 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
                     table.remove(order, i)
                 end
             end
+            Update()
         end)
     end)
 end
