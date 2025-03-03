@@ -57,7 +57,7 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
             notify.Parent = nil
             for i,v in pairs(order) do
                 if v == id then
-                    table.remove(i)
+                    table.remove(order, i)
                 end
             end
         end)
