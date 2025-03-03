@@ -2,7 +2,7 @@ local gui = Instance.new("ScreenGui")
 gui.Parent = game:WaitForChild("CoreGui")
 
 local ts = game:GetService("TweenService")
-local ti = TweenInfo.new(1)
+local ti = TweenInfo.new(0.7)
 
 local notifier = {}
 
@@ -14,7 +14,9 @@ function notifier.new(text: string, duration: number, color: Color3)
     notify.Size = UDim2.new(1, 0, 0, 25)
     notify.BackgroundColor3 = color
     notify.Text = text
-    notify.TextSize = 25
+    notify.TextSize = 20
+    notify.Font = Enum.Font.Arimo
+    notify.BorderSizePixel = 0
     notify.Parent = gui
     task.spawn(function()
         task.wait(duration)
