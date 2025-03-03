@@ -29,8 +29,8 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     local id = random(10)
     local notify = Instance.new("TextLabel")
     local padding = Instance.new("UIPadding")
-    padding.PaddingBottom = 5
-    padding.PaddingTop = 5
+    padding.PaddingBottom = UDim.new(0, 5)
+    padding.PaddingTop = UDim.new(0, 5)
     padding.Parent = notify
     text = text or "nil"
     duration = duration or 3
