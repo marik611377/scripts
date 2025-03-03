@@ -4,9 +4,9 @@ gui.Parent = game:WaitForChild("CoreGui")
 local ts = game:GetService("TweenService")
 local ti = TweenInfo.new(1)
 
-local module = {}
+local notifier = {}
 
-function module.new(text: string, duration: number, color: Color3)
+function notifier.new(text: string, duration: number, color: Color3)
     local notify = Instance.new("TextLabel")
     text = text or "nil"
     duration = duration or 3
@@ -29,4 +29,4 @@ function module.new(text: string, duration: number, color: Color3)
     end)
 end
 
-return module
+return notifier
