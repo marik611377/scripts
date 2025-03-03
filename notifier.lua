@@ -21,7 +21,6 @@ local order = {}
 
 local function Update()
     for i,v in pairs(order) do
-        print(25 * (i - 1))
         ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * (i - 1))}):Play()
     end
 end
@@ -42,6 +41,7 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     notify.Font = Enum.Font.Roboto
     notify.BorderSizePixel = 0
     notify.Name = id
+    notify.TextWrapped = true
     notify.Parent = gui
     table.insert(order, id)
     Update()
