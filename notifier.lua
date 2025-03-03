@@ -21,13 +21,17 @@ local order = {}
 
 local function Update()
     for i,v in pairs(order) do
-        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, 25 * (i - 1))}):Play()
+        ts:Create(gui[v], ti2, {Position = UDim2.new(0, 0, 0, (25 * (i - 1)) + 10)}):Play()
     end
 end
 
 function notifier.new(text: string, duration: number, color: Color3, textcolor: Color3)
     local id = random(10)
     local notify = Instance.new("TextLabel")
+    local padding = Instance.new("UIPadding")
+    padding.PaddingBottom = 5
+    padding.PaddingTop = 5
+    padding.Parent = notify
     text = text or "nil"
     duration = duration or 3
     color = color or Color3.new(1, 1, 1)
