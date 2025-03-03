@@ -18,6 +18,7 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     notify.TextColor3 = textcolor
     notify.Text = text
     notify.TextSize = 20
+    notify.AutomaticSize = Enum.AutomaticSize.Y
     notify.Font = Enum.Font.Roboto
     notify.BorderSizePixel = 0
     notify.Parent = gui
