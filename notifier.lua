@@ -31,6 +31,8 @@ function notifier.new(text: string, duration: number, color: Color3, textcolor: 
     local padding = Instance.new("UIPadding")
     padding.PaddingBottom = UDim.new(0, 5)
     padding.PaddingTop = UDim.new(0, 5)
+    padding.PaddingLeft = UDim.new(0, 2)
+    padding.PaddingRight = UDim.new(0, 2)
     padding.Parent = notify
     text = text or "nil"
     duration = duration or 3
