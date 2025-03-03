@@ -6,7 +6,7 @@ local ts = game:GetService("TweenService")
 local ti = TweenInfo.new(0.7)
 local ti2 = TweenInfo.new(1)
 
-string.random = function(length)
+local function random(length)
     local chars = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     local final = ""
     for i = 1, length do
@@ -26,7 +26,7 @@ local function Update()
 end
 
 function notifier.new(text: string, duration: number, color: Color3, textcolor: Color3)
-    local id = string.random(10)
+    local id = random(10)
     local notify = Instance.new("TextLabel")
     text = text or "nil"
     duration = duration or 3
