@@ -6,8 +6,11 @@ local ti = TweenInfo.new(1)
 
 local module = {}
 
-function module.new(text: string, color: Color3, duration: number)
+function module.new(text: string, duration: number, color: Color3)
     local notify = Instance.new("TextLabel")
+    text = text or "nil"
+    duration = duration or 3
+    color = color or Color3.new(1, 1, 1)
     notify.Size = UDim2.new(1, 0, 0, 25)
     notify.BackgroundColor3 = color
     notify.Text = text
