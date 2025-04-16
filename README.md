@@ -21,7 +21,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/r
 **Universal**
 <br/>
 *Notifier*
-<h6>Not documented yet</h6>
+Click [here](https://abcdefg-1.gitbook.io/documents/notifier/information) for documentation
 
 ```lua
 local notifier = loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/notifier.lua'))()
