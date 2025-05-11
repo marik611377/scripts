@@ -59,7 +59,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Sword",
 	Callback = function(Value)
-		while Value do
+		while Rayfield.Flags["Sword"].Value do
 			task.wait(0.5)
 			modifyToolAttributes("Sword", {
 				LungeRate = 0,
@@ -76,7 +76,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Firebrand",
 	Callback = function()
-		while Value do
+		while Rayfield.Flags["Firebrand"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Firebrand", {
 			    LungeRate = 0,
@@ -94,7 +94,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Katana",
 	Callback = function(Value)
-		while Value do
+		while Rayfield.Flags["Katana"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Katana", {
 			    LungeRate = 0,
@@ -114,7 +114,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Slingshot",
 	Callback = function()
-		while Value do
+		while Rayfield.Flags["Slingshot"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Slingshot", {
 			    Capacity = 10000,
@@ -133,7 +133,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Flamethrower",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Flamethrower"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Flamethrower", {
 			    Cooldown = 0
@@ -151,7 +151,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Paintball_Gun",
 	Callback = function()
-        while Value do
+        while Rayfield.Flags["Paintball_Gun"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Paintball Gun", {
 			    Firerate = 0,
@@ -167,7 +167,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "BB_Gun",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["BB_Gun"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("BB Gun", {
 			    Firerate = 0,
@@ -184,7 +184,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Freeze_Ray",
 	Callback = function()
-        while Value do
+        while Rayfield.Flags["Freeze_Ray"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Freeze Ray", {
 			    Firerate = 0,
@@ -199,7 +199,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Freeze_RayCharge",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Freeze_RayCharge"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Freeze Ray", {
 			    Firerate = 0,
@@ -218,7 +218,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Ninja_Stars",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Ninja_Stars"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Ninja Stars", {
 			    ThrowRate = 0,
@@ -235,7 +235,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Bazooka",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Bazooka"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Bazooka", {
 			    ReloadTick = 0,
@@ -255,7 +255,7 @@ Tab:CreateToggle({
 	Default = false,
 	Flag = "Subspace_Tripmine",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Subspace_Tripmine"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Subspace Tripmine", {
 			    Cooldown = 0
@@ -271,7 +271,7 @@ Tab:CreateToggle({
 	Save = true,
 	Flag = "Explosive_Pinata",
 	Callback = function(Value)
-        while Value do
+        while Rayfield.Flags["Explosive_Pinata"].Value do
 			task.wait(0.5)
 		    modifyToolAttributes("Explosive Pinata", {
 			    Cooldown = 0
@@ -322,7 +322,7 @@ Tab2:CreateInput({
 	PlaceholderText = "",
 	Flag = "meleerangevalue",
 	Callback = function(Value)
-		OrionLib.Flags["meleerangevalue"] = { Value = Value }
+		Rayfield.Flags["meleerangevalue"] = { Value = Value }
 	end	  
 })
 
@@ -333,7 +333,7 @@ Tab2:CreateInput({
 	PlaceholderText = "",
 	Flag = "pogorangevalue",
 	Callback = function(Value)
-		OrionLib.Flags["pogorangevalue"] = { Value = Value }
+		Rayfield.Flags["pogorangevalue"] = { Value = Value }
 	end	  
 })
 
@@ -342,8 +342,8 @@ Tab2:CreateButton({
 	Callback = function()
 		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
 		if accessoryEffects then
-			accessoryEffects:SetAttribute("Melee_Range", OrionLib.Flags["meleerangevalue"].Value)
-			accessoryEffects:SetAttribute("Pogo_Range", OrionLib.Flags["pogorangevalue"].Value)
+			accessoryEffects:SetAttribute("Melee_Range", Rayfield.Flags["meleerangevalue"].Value)
+			accessoryEffects:SetAttribute("Pogo_Range", Rayfield.Flags["pogorangevalue"].Value)
 		else
 			print("AccessoryEffects not found.")
 		end
@@ -375,7 +375,7 @@ Tab3:CreateInput({
 	PlaceholderText = "",
 	Flag = "utilityboostvalue",
 	Callback = function(Value)
-		OrionLib.Flags["utilityboostvalue"] = { Value = Value }
+		Rayfield.Flags["utilityboostvalue"] = { Value = Value }
 	end
 })
 
@@ -384,7 +384,7 @@ Tab3:CreateButton({
 	Callback = function()
 		local character = game.Players.LocalPlayer.Character
 		if character then
-			character:SetAttribute("UtilityBoost", OrionLib.Flags["utilityboostvalue"].Value)
+			character:SetAttribute("UtilityBoost", Rayfield.Flags["utilityboostvalue"].Value)
 		else
 			print("Character not found.")
 		end
