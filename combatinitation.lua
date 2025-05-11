@@ -389,7 +389,7 @@ Tab3:CreateButton({
 })
 
 -- Info Tab
-local Tab4 = Window:MakeTab("Information", 0)
+local Tab4 = Window:CreateTab("Information", 0)
 Tab4:CreateParagraph({Name = "v2.1.2", Content = "Updated for"})
 Tab4:CreateParagraph({Name = "v1.4 ALPHA", Content = "Current version"})
 Tab4:CreateParagraph({Name = "marik611277", Content = "Made by"})
