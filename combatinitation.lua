@@ -319,6 +319,7 @@ Tab2:CreateInput({
 	Name = "Melee Range (5 = +500%)",
 	CurrentValue = "5",
 	RemoveTextAfterFocusLost = false,
+	PlaceholderText = "",
 	Flag = "meleerangevalue",
 	Callback = function(Value)
 		OrionLib.Flags["meleerangevalue"] = { Value = Value }
@@ -329,6 +330,7 @@ Tab2:CreateInput({
 	Name = "Pogo Range (5 = +500%)",
 	Default = "5",
 	RemoveTextAfterFocusLost = false,
+	PlaceholderText = "",
 	Flag = "pogorangevalue",
 	Callback = function(Value)
 		OrionLib.Flags["pogorangevalue"] = { Value = Value }
@@ -370,6 +372,7 @@ Tab3:CreateInput({
 	Name = "Utility Boost Value",
 	CurrentValue = "2",
 	RemoveTextAfterFocusLost = false,
+	PlaceholderText = "",
 	Flag = "utilityboostvalue",
 	Callback = function(Value)
 		OrionLib.Flags["utilityboostvalue"] = { Value = Value }
