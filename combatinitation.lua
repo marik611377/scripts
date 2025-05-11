@@ -51,7 +51,7 @@ end
 local Tab = Window:CreateTab("Fun Stuffz", 0)
 
 local Section1 = Tab:CreateSection("Sword")
-Tab:CreateParagraph({Name = "Sword", Content = "Parry go BRRR"})
+Tab:CreateParagraph({Title = "Sword", Content = "Parry go BRRR"})
 
 -- Button for Modded Sword
 Tab:CreateToggle({
@@ -106,7 +106,7 @@ Tab:CreateToggle({
 })
 
 local Section2 = Tab:CreateSection("Slingshot")
-Tab:CreateParagraph({Name = "Slingshot", Content = "Spammy!"})
+Tab:CreateParagraph({Title = "Slingshot", Content = "Spammy!"})
 
 -- Button for Modded Slingshot
 Tab:CreateToggle({
@@ -143,7 +143,7 @@ Tab:CreateToggle({
 })
 
 local Section3 = Tab:CreateSection("Paintball Gun")
-Tab:CreateParagraph({Name = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
+Tab:CreateParagraph({Title = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
 
 -- Button for Modded Paintball Gun
 Tab:CreateToggle({
@@ -210,7 +210,7 @@ Tab:CreateToggle({
 })
 
 local Section4 = Tab:CreateSection("Superball")
-Tab:CreateParagraph({Name = "Superball", Content = "Bounce."})
+Tab:CreateParagraph({Title = "Superball", Content = "Bounce."})
 
 -- Button for Modded Ninja Stars
 Tab:CreateToggle({
@@ -247,7 +247,7 @@ Tab:CreateToggle({
 })
 
 local Section5 = Tab:CreateSection("Timebomb")
-Tab:CreateParagraph({Name = "Timebomb", Content = "Chat is this real?"})
+Tab:CreateParagraph({Title = "Timebomb", Content = "Chat is this real?"})
 
 -- Button for Modded Subspace Tripmine
 Tab:CreateToggle({
@@ -281,7 +281,7 @@ Tab:CreateToggle({
 })
 
 local Section6 = Tab:CreateSection("Trowel")
-Tab:CreateParagraph({Name = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
+Tab:CreateParagraph({Title = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
 
 -- Toggle for Frozen Wrench
 Tab:CreateToggle({
@@ -390,9 +390,9 @@ Tab3:CreateButton({
 
 -- Info Tab
 local Tab4 = Window:CreateTab("Information", 0)
-Tab4:CreateParagraph({Name = "v2.1.2", Content = "Updated for"})
-Tab4:CreateParagraph({Name = "v1.4 ALPHA", Content = "Current version"})
-Tab4:CreateParagraph({Name = "marik611277", Content = "Made by"})
-Tab4:CreateParagraph({Name = "Synapse X Remake", Content = "Created firstly in"})
-Tab4:CreateParagraph({Name = "Non-GUI script", Content = "Inspired by"})
-Tab4:CreateParagraph({Name = "discord.gg/HmP63uHfWq", Content = "Synapse X Remake Discord"})
+Tab4:CreateParagraph({Title = "v2.1.2", Content = "Updated for"})
+Tab4:CreateParagraph({Title = "v1.4 ALPHA", Content = "Current version"})
+Tab4:CreateParagraph({Title = "marik611277", Content = "Made by"})
+Tab4:CreateParagraph({Title = "Synapse X Remake", Content = "Created firstly in"})
+Tab4:CreateParagraph({Title = "Non-GUI script", Content = "Inspired by"})
+Tab4:CreateParagraph({Title = "discord.gg/HmP63uHfWq", Content = "Synapse X Remake Discord"})
