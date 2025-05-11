@@ -1,5 +1,37 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/Orion-Library/source')))()
-local Window = OrionLib:MakeWindow({Name = "Combat Initation Script (v2.1.2)", HidePremium = false, SaveConfig = true, ConfigFolder = "CombatInitationConfig"})
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Combat Initation Script (v2.1.2)",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
 
 -- Function to modify tool attributes safely (check both Backpack and equipped tools)
 local function modifyToolAttributes(toolName, attributes)
@@ -16,20 +48,15 @@ local function modifyToolAttributes(toolName, attributes)
     end
 end
 
-local Tab = Window:MakeTab({
-	Name = "Fun Stuffz",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Tab = Window:CreateTab("Fun Stuffz", 0)
 
-local Section1 = Tab:AddSection({ Name = "Sword" })
-Section1:AddParagraph("Sword", "Parry go BRRR")
+local Section1 = Tab:CreateSection("Sword")
+Section1:CreateParagraph({Name = "Sword", Content = "Parry go BRRR"})
 
 -- Button for Modded Sword
-Section1:AddToggle({
+Section1:CreateToggle({
 	Name = "Modded Sword",
 	Default = false,
-	Save = true,
 	Flag = "Sword",
 	Callback = function(Value)
 		while Value do
@@ -44,10 +71,9 @@ Section1:AddToggle({
 })
 
 -- Button for Modded Firebrand
-Section1:AddToggle({
+Section1:CreateToggle({
 	Name = "Modded Firebrand",
 	Default = false,
-	Save = true,
 	Flag = "Firebrand",
 	Callback = function()
 		while Value do
@@ -63,10 +89,9 @@ Section1:AddToggle({
 })
 
 -- Button for Modded Katana
-Section1:AddToggle({
+Section1:CreateToggle({
 	Name = "Modded Katana",
 	Default = false,
-	Save = true,
 	Flag = "Katana",
 	Callback = function(Value)
 		while Value do
@@ -80,14 +105,13 @@ Section1:AddToggle({
 	end
 })
 
-local Section2 = Tab:AddSection({ Name = "Slingshot" })
-Section2:AddParagraph("Slingshot", "Spammy!")
+local Section2 = Tab:CreateSection("Slingshot")
+Section2:CreateParagraph({Name = "Slingshot", Content = "Spammy!"})
 
 -- Button for Modded Slingshot
-Section2:AddToggle({
+Section2:CreateToggle({
 	Name = "Modded Slingshot",
 	Default = false,
-	Save = true,
 	Flag = "Slingshot",
 	Callback = function()
 		while Value do
@@ -104,10 +128,9 @@ Section2:AddToggle({
 })
 
 -- Button for Modded Flamethrower
-Section2:AddToggle({
+Section2:CreateToggle({
 	Name = "Modded Flamethrower",
 	Default = false,
-	Save = true,
 	Flag = "Flamethrower",
 	Callback = function(Value)
         while Value do
@@ -119,14 +142,13 @@ Section2:AddToggle({
 	end
 })
 
-local Section3 = Tab:AddSection({ Name = "Paintball Gun" })
-Section3:AddParagraph("Paintball Gun", "Ah, yes! The good ol' ranged guns!")
+local Section3 = Tab:CreateSection("Paintball Gun")
+Section3:CreateParagraph({Name = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
 
 -- Button for Modded Paintball Gun
-Section3:AddToggle({
+Section3:CreateToggle({
 	Name = "Modded Paintball Gun",
 	Default = false,
-	Save = true,
 	Flag = "Paintball_Gun",
 	Callback = function()
         while Value do
@@ -140,10 +162,9 @@ Section3:AddToggle({
 })
 
 -- Button for Modded BB Gun
-Section3:AddToggle({
+Section3:CreateToggle({
 	Name = "Modded BB Gun",
 	Default = false,
-	Save = true,
 	Flag = "BB_Gun",
 	Callback = function(Value)
         while Value do
@@ -158,10 +179,9 @@ Section3:AddToggle({
 })
 
 -- Button for Modded Freeze Ray
-Section3:AddToggle({
+Section3:CreateToggle({
 	Name = "Modded Freeze Ray (Always Charged)",
 	Default = false,
-	Save = true,
 	Flag = "Freeze_Ray",
 	Callback = function()
         while Value do
@@ -174,10 +194,9 @@ Section3:AddToggle({
         end
 	end
 })
-Section3:AddToggle({
+Section3:CreateToggle({
 	Name = "Modded Freeze Ray (Hold to Charge)",
 	Default = false,
-	Save = true,
 	Flag = "Freeze_RayCharge",
 	Callback = function(Value)
         while Value do
@@ -190,14 +209,13 @@ Section3:AddToggle({
 	end
 })
 
-local Section4 = Tab:AddSection({ Name = "Superball" })
-Section4:AddParagraph("Superball", "Bounce.")
+local Section4 = Tab:CreateSection("Superball")
+Section4:CreateParagraph({Name = "Superball", Content = "Bounce."})
 
 -- Button for Modded Ninja Stars
-Section4:AddToggle({
+Section4:CreateToggle({
 	Name = "Modded Ninja Stars",
 	Default = false,
-	Save = true,
 	Flag = "Ninja_Stars",
 	Callback = function(Value)
         while Value do
@@ -212,10 +230,9 @@ Section4:AddToggle({
 })
 
 -- Button for Modded Bazooka
-Section4:AddToggle({
+Section4:CreateToggle({
 	Name = "Modded Bazooka",
 	Default = false,
-	Save = true,
 	Flag = "Bazooka",
 	Callback = function(Value)
         while Value do
@@ -229,14 +246,13 @@ Section4:AddToggle({
 	end
 })
 
-local Section5 = Tab:AddSection({ Name = "Timebomb" })
-Section5:AddParagraph("Timebomb", "Chat is this real?")
+local Section5 = Tab:CreateSection("Timebomb")
+Section5:CreateParagraph({Name = "Timebomb", Content = "Chat is this real?"})
 
 -- Button for Modded Subspace Tripmine
-Section5:AddToggle({
+Section5:CreateToggle({
 	Name = "Modded Subspace Tripmine",
 	Default = false,
-	Save = true,
 	Flag = "Subspace_Tripmine",
 	Callback = function(Value)
         while Value do
@@ -249,7 +265,7 @@ Section5:AddToggle({
 })
 
 -- Button for Modded Explosive Pinata
-Section5:AddToggle({
+Section5:CreateToggle({
 	Name = "Modded Explosive Pinata",
 	Default = false,
 	Save = true,
@@ -264,10 +280,11 @@ Section5:AddToggle({
 	end
 })
 
-local Section6 = Tab:AddSection({ Name = "Trowel" })
+local Section6 = Tab:CreateSection("Trowel")
+Section6:CreateParagraph({Name = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
 
 -- Toggle for Frozen Wrench
-Section6:AddToggle({
+Section6:CreateToggle({
 	Name = "Frozen Wrench",
 	Default = false,
 	Save = true,
@@ -283,14 +300,10 @@ Section6:AddToggle({
 })
 
 -- Hats Tab
-local Tab2 = Window:MakeTab({
-	Name = "Hats",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Tab2 = Window:CreateTab("Hats", 0)
 
 -- Button for Electric Punk
-Tab2:AddButton({
+Tab2:CreateButton({
 	Name = "Electric Punk (Lighting Chance)",
 	Callback = function()
 		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
@@ -302,27 +315,27 @@ Tab2:AddButton({
 	end
 })
 
-Tab2:AddTextbox({
+Tab2:CreateInput({
 	Name = "Melee Range (5 = +500%)",
-	Default = "5",
-	TextDisappear = false,
+	CurrentValue = "5",
+	RemoveTextAfterFocusLost = false,
 	Flag = "meleerangevalue",
 	Callback = function(Value)
 		OrionLib.Flags["meleerangevalue"] = { Value = Value }
 	end	  
 })
 
-Tab2:AddTextbox({
+Tab2:CreateInput({
 	Name = "Pogo Range (5 = +500%)",
 	Default = "5",
-	TextDisappear = false,
+	RemoveTextAfterFocusLost = false,
 	Flag = "pogorangevalue",
 	Callback = function(Value)
 		OrionLib.Flags["pogorangevalue"] = { Value = Value }
 	end	  
 })
 
-Tab2:AddButton({
+Tab2:CreateButton({
 	Name = "Bandit/Stage Prop (Melee Range & Pogo Range)",
 	Callback = function()
 		local accessoryEffects = game.Players.LocalPlayer.Backpack.Parent:FindFirstChild("AccessoryEffects")
@@ -336,14 +349,10 @@ Tab2:AddButton({
 })
 
 -- Character Tab
-local Tab3 = Window:MakeTab({
-	Name = "Character",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Tab3 = Window:CreateTab("Character")
 
 -- Button for Infinite Dashes
-Tab3:AddButton({
+Tab3:CreateButton({
 	Name = "Infinite Dashes",
 	Callback = function()
 		local character = game.Players.LocalPlayer.Character
@@ -357,17 +366,17 @@ Tab3:AddButton({
 })
 
 -- Utility Boost Textbox and Button
-Tab3:AddTextbox({
+Tab3:CreateInput({
 	Name = "Utility Boost Value",
-	Default = "2",
-	TextDisappear = false,
+	CurrentValue = "2",
+	RemoveTextAfterFocusLost = false,
 	Flag = "utilityboostvalue",
 	Callback = function(Value)
 		OrionLib.Flags["utilityboostvalue"] = { Value = Value }
 	end
 })
 
-Tab3:AddButton({
+Tab3:CreateButton({
 	Name = "Utility Boost",
 	Callback = function()
 		local character = game.Players.LocalPlayer.Character
@@ -380,16 +389,12 @@ Tab3:AddButton({
 })
 
 -- Info Tab
-local Tab4 = Window:MakeTab({
-	Name = "Info",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-Tab4:AddParagraph("v2.1.2", "Updated for")
-Tab4:AddParagraph("v1.4 ALPHA", "Current version")
-Tab4:AddParagraph("marik611277", "Made by")
-Tab4:AddParagraph("Synapse X Remake", "Created firstly in")
-Tab4:AddParagraph("Non-GUI script", "Inspired by")
-Tab4:AddParagraph("discord.gg/HmP63uHfWq", "Synapse X Remake Discord")
+local Tab4 = Window:MakeTab("Information", 0)
+Tab4:CreateParagraph({Name = "v2.1.2", Content = "Updated for"})
+Tab4:CreateParagraph({Name = "v1.4 ALPHA", Content = "Current version"})
+Tab4:CreateParagraph({Name = "marik611277", Content = "Made by"})
+Tab4:CreateParagraph({Name = "Synapse X Remake", Content = "Created firstly in"})
+Tab4:CreateParagraph({Name = "Non-GUI script", Content = "Inspired by"})
+Tab4:CreateParagraph({Name = "discord.gg/HmP63uHfWq", Content = "Synapse X Remake Discord"})
 
 OrionLib:Init()
