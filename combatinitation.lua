@@ -50,11 +50,11 @@ end
 
 local Tab = Window:CreateTab("Fun Stuffz", 0)
 
-local Section1 = Tab:CreateSection("Sword")
-Section1:CreateParagraph({Name = "Sword", Content = "Parry go BRRR"})
+local Tab = Tab:CreateSection("Sword")
+Tab:CreateParagraph({Name = "Sword", Content = "Parry go BRRR"})
 
 -- Button for Modded Sword
-Section1:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Sword",
 	Default = false,
 	Flag = "Sword",
@@ -71,7 +71,7 @@ Section1:CreateToggle({
 })
 
 -- Button for Modded Firebrand
-Section1:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Firebrand",
 	Default = false,
 	Flag = "Firebrand",
@@ -89,7 +89,7 @@ Section1:CreateToggle({
 })
 
 -- Button for Modded Katana
-Section1:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Katana",
 	Default = false,
 	Flag = "Katana",
@@ -105,11 +105,11 @@ Section1:CreateToggle({
 	end
 })
 
-local Section2 = Tab:CreateSection("Slingshot")
-Section2:CreateParagraph({Name = "Slingshot", Content = "Spammy!"})
+local Tab = Tab:CreateSection("Slingshot")
+Tab:CreateParagraph({Name = "Slingshot", Content = "Spammy!"})
 
 -- Button for Modded Slingshot
-Section2:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Slingshot",
 	Default = false,
 	Flag = "Slingshot",
@@ -128,7 +128,7 @@ Section2:CreateToggle({
 })
 
 -- Button for Modded Flamethrower
-Section2:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Flamethrower",
 	Default = false,
 	Flag = "Flamethrower",
@@ -142,11 +142,11 @@ Section2:CreateToggle({
 	end
 })
 
-local Section3 = Tab:CreateSection("Paintball Gun")
-Section3:CreateParagraph({Name = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
+local Tab = Tab:CreateSection("Paintball Gun")
+Tab:CreateParagraph({Name = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
 
 -- Button for Modded Paintball Gun
-Section3:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Paintball Gun",
 	Default = false,
 	Flag = "Paintball_Gun",
@@ -162,7 +162,7 @@ Section3:CreateToggle({
 })
 
 -- Button for Modded BB Gun
-Section3:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded BB Gun",
 	Default = false,
 	Flag = "BB_Gun",
@@ -179,7 +179,7 @@ Section3:CreateToggle({
 })
 
 -- Button for Modded Freeze Ray
-Section3:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Freeze Ray (Always Charged)",
 	Default = false,
 	Flag = "Freeze_Ray",
@@ -194,7 +194,7 @@ Section3:CreateToggle({
         end
 	end
 })
-Section3:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Freeze Ray (Hold to Charge)",
 	Default = false,
 	Flag = "Freeze_RayCharge",
@@ -209,11 +209,11 @@ Section3:CreateToggle({
 	end
 })
 
-local Section4 = Tab:CreateSection("Superball")
-Section4:CreateParagraph({Name = "Superball", Content = "Bounce."})
+local Tab = Tab:CreateSection("Superball")
+Tab:CreateParagraph({Name = "Superball", Content = "Bounce."})
 
 -- Button for Modded Ninja Stars
-Section4:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Ninja Stars",
 	Default = false,
 	Flag = "Ninja_Stars",
@@ -230,7 +230,7 @@ Section4:CreateToggle({
 })
 
 -- Button for Modded Bazooka
-Section4:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Bazooka",
 	Default = false,
 	Flag = "Bazooka",
@@ -246,11 +246,11 @@ Section4:CreateToggle({
 	end
 })
 
-local Section5 = Tab:CreateSection("Timebomb")
-Section5:CreateParagraph({Name = "Timebomb", Content = "Chat is this real?"})
+local Tab = Tab:CreateSection("Timebomb")
+Tab:CreateParagraph({Name = "Timebomb", Content = "Chat is this real?"})
 
 -- Button for Modded Subspace Tripmine
-Section5:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Subspace Tripmine",
 	Default = false,
 	Flag = "Subspace_Tripmine",
@@ -265,7 +265,7 @@ Section5:CreateToggle({
 })
 
 -- Button for Modded Explosive Pinata
-Section5:CreateToggle({
+Tab:CreateToggle({
 	Name = "Modded Explosive Pinata",
 	Default = false,
 	Save = true,
@@ -280,11 +280,11 @@ Section5:CreateToggle({
 	end
 })
 
-local Section6 = Tab:CreateSection("Trowel")
-Section6:CreateParagraph({Name = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
+local Tab = Tab:CreateSection("Trowel")
+Tab:CreateParagraph({Name = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
 
 -- Toggle for Frozen Wrench
-Section6:CreateToggle({
+Tab:CreateToggle({
 	Name = "Frozen Wrench",
 	Default = false,
 	Save = true,
