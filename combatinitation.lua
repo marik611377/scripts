@@ -396,5 +396,3 @@ Tab4:CreateParagraph({Name = "marik611277", Content = "Made by"})
 Tab4:CreateParagraph({Name = "Synapse X Remake", Content = "Created firstly in"})
 Tab4:CreateParagraph({Name = "Non-GUI script", Content = "Inspired by"})
 Tab4:CreateParagraph({Name = "discord.gg/HmP63uHfWq", Content = "Synapse X Remake Discord"})
-
-OrionLib:Init()
