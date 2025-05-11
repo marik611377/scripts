@@ -50,7 +50,7 @@ end
 
 local Tab = Window:CreateTab("Fun Stuffz", 0)
 
-local Tab = Tab:CreateSection("Sword")
+local Section1 = Tab:CreateSection("Sword")
 Tab:CreateParagraph({Name = "Sword", Content = "Parry go BRRR"})
 
 -- Button for Modded Sword
@@ -105,7 +105,7 @@ Tab:CreateToggle({
 	end
 })
 
-local Tab = Tab:CreateSection("Slingshot")
+local Section2 = Tab:CreateSection("Slingshot")
 Tab:CreateParagraph({Name = "Slingshot", Content = "Spammy!"})
 
 -- Button for Modded Slingshot
@@ -142,7 +142,7 @@ Tab:CreateToggle({
 	end
 })
 
-local Tab = Tab:CreateSection("Paintball Gun")
+local Section3 = Tab:CreateSection("Paintball Gun")
 Tab:CreateParagraph({Name = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
 
 -- Button for Modded Paintball Gun
@@ -209,7 +209,7 @@ Tab:CreateToggle({
 	end
 })
 
-local Tab = Tab:CreateSection("Superball")
+local Section4 = Tab:CreateSection("Superball")
 Tab:CreateParagraph({Name = "Superball", Content = "Bounce."})
 
 -- Button for Modded Ninja Stars
@@ -246,7 +246,7 @@ Tab:CreateToggle({
 	end
 })
 
-local Tab = Tab:CreateSection("Timebomb")
+local Section5 = Tab:CreateSection("Timebomb")
 Tab:CreateParagraph({Name = "Timebomb", Content = "Chat is this real?"})
 
 -- Button for Modded Subspace Tripmine
@@ -280,7 +280,7 @@ Tab:CreateToggle({
 	end
 })
 
-local Tab = Tab:CreateSection("Trowel")
+local Section6 = Tab:CreateSection("Trowel")
 Tab:CreateParagraph({Name = "Trowel", Content = "Hey look guys! I'm a Builder Man!"})
 
 -- Toggle for Frozen Wrench
