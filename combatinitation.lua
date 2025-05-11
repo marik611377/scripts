@@ -54,54 +54,39 @@ local Section1 = Tab:CreateSection("Sword")
 Tab:CreateParagraph({Title = "Sword", Content = "Parry go BRRR"})
 
 -- Button for Modded Sword
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Sword",
-	Default = false,
-	Flag = "Sword",
 	Callback = function(Value)
-		while Rayfield.Flags["Sword"].Value do
-			task.wait(0.5)
-			modifyToolAttributes("Sword", {
-				LungeRate = 0,
-				Swingrate = 0,
-				OffhandSwingRate = 0
-			})
-		end
+		modifyToolAttributes("Sword", {
+			LungeRate = 0,
+			Swingrate = 0,
+			OffhandSwingRate = 0
+		})
 	end
 })
 
 -- Button for Modded Firebrand
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Firebrand",
-	Default = false,
-	Flag = "Firebrand",
 	Callback = function()
-		while Rayfield.Flags["Firebrand"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Firebrand", {
-			    LungeRate = 0,
-			    Swingrate = 0,
-			    OffhandSwingRate = 0,
-			    Windup = 0
-		    })
-		end
+		modifyToolAttributes("Firebrand", {
+			LungeRate = 0,
+			Swingrate = 0,
+			OffhandSwingRate = 0,
+			Windup = 0
+		})
 	end
 })
 
 -- Button for Modded Katana
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Katana",
-	Default = false,
-	Flag = "Katana",
-	Callback = function(Value)
-		while Rayfield.Flags["Katana"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Katana", {
-			    LungeRate = 0,
-			    Swingrate = 0,
-			    OffhandSwingRate = 0
-		    })
-		end
+	Callback = function()
+		modifyToolAttributes("Katana", {
+		    LungeRate = 0,
+		    Swingrate = 0,
+		    OffhandSwingRate = 0
+		})
 	end
 })
 
@@ -109,36 +94,26 @@ local Section2 = Tab:CreateSection("Slingshot")
 Tab:CreateParagraph({Title = "Slingshot", Content = "Spammy!"})
 
 -- Button for Modded Slingshot
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Slingshot",
-	Default = false,
-	Flag = "Slingshot",
 	Callback = function()
-		while Rayfield.Flags["Slingshot"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Slingshot", {
-			    Capacity = 10000,
-			    ChargeRate = 0,
-			    Firerate = 0,
-			    Spread = 0,
-			    ProjectileSpeed = 2250
-		    })
-		end
+		modifyToolAttributes("Slingshot", {
+			Capacity = 10000,
+			ChargeRate = 0,
+			Firerate = 0,
+			Spread = 0,
+			ProjectileSpeed = 2250
+		})
 	end
 })
 
 -- Button for Modded Flamethrower
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Flamethrower",
-	Default = false,
-	Flag = "Flamethrower",
-	Callback = function(Value)
-        while Rayfield.Flags["Flamethrower"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Flamethrower", {
-			    Cooldown = 0
-		    })
-        end
+	Callback = function()
+		modifyToolAttributes("Flamethrower", {
+		    Cooldown = 0
+		})
 	end
 })
 
@@ -146,66 +121,46 @@ local Section3 = Tab:CreateSection("Paintball Gun")
 Tab:CreateParagraph({Title = "Paintball Gun", Content = "Ah, yes! The good ol' ranged guns!"})
 
 -- Button for Modded Paintball Gun
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Paintball Gun",
-	Default = false,
-	Flag = "Paintball_Gun",
 	Callback = function()
-        while Rayfield.Flags["Paintball_Gun"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Paintball Gun", {
-			    Firerate = 0,
-			    ProjectileSpeed = 2250
-		    })
-        end
+		modifyToolAttributes("Paintball Gun", {
+		    Firerate = 0,
+		    ProjectileSpeed = 2250
+		})
 	end
 })
 
 -- Button for Modded BB Gun
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded BB Gun",
-	Default = false,
-	Flag = "BB_Gun",
-	Callback = function(Value)
-        while Rayfield.Flags["BB_Gun"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("BB Gun", {
-			    Firerate = 0,
-			    MinShots = 2,
-			    MaxShots = math.huge -- Use `math.huge` for infinite value
-		    })
-        end
+	Callback = function()
+		modifyToolAttributes("BB Gun", {
+		    Firerate = 0,
+		    MinShots = 2,
+		    MaxShots = math.huge -- Use `math.huge` for infinite value
+		})
 	end
 })
 
 -- Button for Modded Freeze Ray
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Freeze Ray (Always Charged)",
-	Default = false,
-	Flag = "Freeze_Ray",
 	Callback = function()
-        while Rayfield.Flags["Freeze_Ray"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Freeze Ray", {
-			    Firerate = 0,
-			    ProjectileSpeed = 2250,
-			    ChargeTime = 0
-		    })
-        end
+		modifyToolAttributes("Freeze Ray", {
+		    Firerate = 0,
+		    ProjectileSpeed = 2250,
+		    ChargeTime = 0
+		})
 	end
 })
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Freeze Ray (Hold to Charge)",
-	Default = false,
-	Flag = "Freeze_RayCharge",
-	Callback = function(Value)
-        while Rayfield.Flags["Freeze_RayCharge"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Freeze Ray", {
-			    Firerate = 0,
-			    ProjectileSpeed = 2250,
-		    })
-        end
+	Callback = function()
+		modifyToolAttributes("Freeze Ray", {
+		    Firerate = 0,
+		    ProjectileSpeed = 2250,
+		})
 	end
 })
 
@@ -213,36 +168,28 @@ local Section4 = Tab:CreateSection("Superball")
 Tab:CreateParagraph({Title = "Superball", Content = "Bounce."})
 
 -- Button for Modded Ninja Stars
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Ninja Stars",
-	Default = false,
-	Flag = "Ninja_Stars",
 	Callback = function(Value)
-        while Rayfield.Flags["Ninja_Stars"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Ninja Stars", {
-			    ThrowRate = 0,
-			    Capacity = 10000000,
-			    ChargeRate = 0
-		    })
-        end
+		modifyToolAttributes("Ninja Stars", {
+		    ThrowRate = 0,
+		    Capacity = 10000000,
+		    ChargeRate = 0
+		})
 	end
 })
 
 -- Button for Modded Bazooka
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Bazooka",
 	Default = false,
 	Flag = "Bazooka",
-	Callback = function(Value)
-        while Rayfield.Flags["Bazooka"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Bazooka", {
-			    ReloadTick = 0,
-			    Capacity = 100,
-			    PassiveReloadTick = 0
-		    })
-        end
+	Callback = function()
+		modifyToolAttributes("Bazooka", {
+			ReloadTick = 0,
+			Capacity = 100,
+			PassiveReloadTick = 0
+		})
 	end
 })
 
@@ -250,33 +197,24 @@ local Section5 = Tab:CreateSection("Timebomb")
 Tab:CreateParagraph({Title = "Timebomb", Content = "Chat is this real?"})
 
 -- Button for Modded Subspace Tripmine
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Subspace Tripmine",
 	Default = false,
 	Flag = "Subspace_Tripmine",
-	Callback = function(Value)
-        while Rayfield.Flags["Subspace_Tripmine"].Value do
-			task.wait(0.5)
-		    modifyToolAttributes("Subspace Tripmine", {
-			    Cooldown = 0
-		    })
-        end
+	Callback = function()
+		modifyToolAttributes("Subspace Tripmine", {
+		    Cooldown = 0
+		})
 	end
 })
 
 -- Button for Modded Explosive Pinata
-Tab:CreateToggle({
+Tab:CreateButton({
 	Name = "Modded Explosive Pinata",
-	Default = false,
-	Save = true,
-	Flag = "Explosive_Pinata",
 	Callback = function(Value)
-        while Rayfield.Flags["Explosive_Pinata"].Value do
-			task.wait(0.5)
 		    modifyToolAttributes("Explosive Pinata", {
 			    Cooldown = 0
 		    })
-        end
 	end
 })
 
@@ -286,8 +224,6 @@ Tab:CreateParagraph({Title = "Trowel", Content = "Hey look guys! I'm a Builder M
 -- Toggle for Frozen Wrench
 Tab:CreateToggle({
 	Name = "Frozen Wrench",
-	Default = false,
-	Save = true,
 	Flag = "Wrench",
 	Callback = function(Value)
 		local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Wrench") or game.Players.LocalPlayer.Character:FindFirstChild("Wrench")
