@@ -29,3 +29,12 @@ Click [here](https://abcdefg-1.gitbook.io/documents/notifier/information) for do
 ```lua
 local notifier = loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/notifier.lua'))()
 ```
+
+---
+
+### Enchaned Table Checking
+
+> [!IMPORTANT]
+> This script is for checking tables.
+
+[Documentation](https://abcdefg-1.gitbook.io/documents/enhanced-table-checking/information) here
