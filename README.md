@@ -7,7 +7,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/m
 ```
 ### Thanks to Orion Library for the GUI!
 ---
-**Jujutsu Shenanigans (up to date)**
+**Jujutsu Shenanigans**
 <br/>
 *Fumbler*
 ```lua
@@ -31,7 +31,14 @@ local notifier = loadstring(game:HttpGet('https://raw.githubusercontent.com/mari
 ```
 
 ---
-
+> [!WARNING]
+> This script is very unfinished. Feel free to open up an issue for suggestions.
+<br/>
+**Shovel Spleef**
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/shovelspleef.lua'))()
+```
+---
 ### Enchaned Table Checking
 
 > [!IMPORTANT]
