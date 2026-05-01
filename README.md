@@ -36,15 +36,21 @@ local notifier = loadstring(game:HttpGet('https://raw.githubusercontent.com/mari
 
 <br/>
 
-[Game](https://www.roblox.com/games/123357112612493/Shovel-Spleef)
-<br/>
-
-**Shovel Spleef**
+[**Shovel Spleef**](https://www.roblox.com/games/123357112612493/Shovel-Spleef)
 <br/>
 
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/shovelspleef.lua'))()
 ```
+
+---
+[**Forsaken Guest Fighting**](https://www.roblox.com/games/136975118595073/FORSAKEN-GUEST-FIGHTING)
+<br/>
+
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/marik611377/scripts/refs/heads/main/forsakenguestfighting.lua'))
+```
+
 ---
 ### Enchaned Table Checking
 
